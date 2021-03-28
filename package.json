@@ -20,8 +20,13 @@
   },
   "homepage": "https://github.com/platzi/curso-webpack-react#readme",
   "dependencies": {
+    "css-loader": "^5.2.0",
+    "mini-css-extract-plugin": "^1.4.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "sass": "^1.32.8",
+    "sass-loader": "^11.0.1",
+    "style-loader": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.13.13",
