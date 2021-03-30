@@ -1,7 +1,23 @@
-$base-color: #c6538c;
+$base-color: #f9f9f9;
 $color: rgba(black, 0.38);
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('../assets/fonts/ubuntu-v15-latin_cyrillic-regular.eot')
+      format('embedded-opentype'),
+    url('../assets/fonts/ubuntu-v15-latin_cyrillic-regular.svg') format('svg'),
+    url('../assets/fonts/ubuntu-v15-latin_cyrillic-regular.ttf')
+      format('truetype'),
+    url('../assets/fonts/ubuntu-v15-latin_cyrillic-regular.woff') format('woff'),
+    url('../assets/fonts/ubuntu-v15-latin_cyrillic-regular.woff2')
+      format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
 
 body {
   background-color: $base-color;
-  color: $color; 
+  color: $color;
+  margin: 0;
+  font-family: 'Ubuntu';
 }
