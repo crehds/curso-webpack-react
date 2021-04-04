@@ -1,0 +1,7 @@
+.card ul {
+  list-style-type: none;
+}
+.card li {
+  display: inline-block;
+  margin: 0 1em 0 0;
+}

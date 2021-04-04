@@ -1,0 +1,65 @@
+.card_photo {
+  position: relative;
+  background: #fff;
+  padding: 5px;
+  width: 190px;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.card_photo img {
+  width: 15px;
+  border-radius: 50%;
+}
+
+.card_title {
+  color: #999;
+  font-size: 18px;
+  margin: 0;
+}
+
+.card_value {
+  color: #2c2e31;
+  font-size: 38px;
+  margin: 5px;
+  text-transform: capitalize;
+}
+
+.center {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.circle {
+  position: relative;
+}
+
+.circle svg {
+  fill: none;
+  stroke: #8a3ab9;
+  stroke-linecap: round;
+  stroke-width: 3;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  animation: stroke-draw 6s ease-out infinite alternate;
+}
+
+.circle img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 50%);
+}
+@keyframes stroke-draw {
+  from {
+    stroke: #8a3ab9;
+    stroke-dasharray: 1;
+  }
+  to {
+    stroke: #cb486b;
+    transform: rotate(180deg);
+    stroke-dasharray: 8;
+  }
+}
