@@ -11,7 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/',
+    publicPath: './',
     assetModuleFilename: 'assets/images/[hash][ext][query]',
   },
   resolve: {
@@ -37,7 +37,7 @@ module.exports = {
       },
       {
         test: /\.(s[ac]ss|css)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
         test: /\.png/,
@@ -51,7 +51,7 @@ module.exports = {
             limit: 10000,
             name: '[name].[ext]',
             outputPath: './assets/fonts/',
-            publicPath: './assets/fonts/',
+            publicPath: 'fonts/',
             esModule: false,
           },
         },
@@ -60,21 +60,22 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      inject: true,
       template: './public/index.html',
       filename: './index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: 'assets/[name][contenthash].css',
     }),
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     {
+    //       from: path.resolve(__dirname, 'src', 'assets/images'),
+    //       to: 'assets/images',
+    //     },
+    //   ],
+    // }),
     new CleanWebpackPlugin(),
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, 'src', 'assets/images'),
-          to: 'assets/images',
-        },
-      ],
-    }),
   ],
   optimization: {
     minimize: true,

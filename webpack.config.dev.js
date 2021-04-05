@@ -29,8 +29,9 @@ module.exports = {
       },
       {
         test: /\.(s[ac]ss|css)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
+
       {
         test: /\.png/,
         type: 'asset/resource',
@@ -52,6 +53,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      inject: true,
       template: './public/index.html',
       filename: './index.html',
     }),
