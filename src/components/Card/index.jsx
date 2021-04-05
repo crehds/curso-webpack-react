@@ -4,11 +4,11 @@ import { CardSocial } from './CardSocial';
 import { CardUserData } from './CardUserData';
 import './styles.css';
 
-export const Card = () => {
+export const Card = (props) => {
   return (
     <div className='card'>
-      <CardDetails />
-      <CardUserData />
+      <CardDetails src={props.picture.large} name={props.name}/>
+      <CardUserData email={props.email} country={props.location.country}/>
       <CardSocial />
     </div>
   );
