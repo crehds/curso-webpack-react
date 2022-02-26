@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { About } from './components/About';
+import { NavBar } from './components/Navbar';
 import { useGetData } from './hooks/useGetData';
 import { Loader } from './loader';
 
@@ -8,7 +9,12 @@ const App = () => {
   return (
     <>
       {loading && <Loader />}
-      {!loading && <About {...user} />}
+      {!loading && (
+        <>
+          <NavBar />
+          <About {...user} />
+        </>
+      )}
     </>
   );
 };

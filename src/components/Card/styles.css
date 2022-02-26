@@ -1,13 +1,13 @@
 .card {
   position: relative;
   padding: 20px 0;
-  width: 100%;
   background: #fff;
   border-radius: 3px;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   text-align: center;
   z-index: 5;
+  margin: 10px;
   &::after {
     content: '';
     display: block;
@@ -16,7 +16,7 @@
     height: 130px;
     top: 0;
     background: #f9f9f9;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     z-index: -1;
   }
 }
