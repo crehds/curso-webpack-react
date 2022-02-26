@@ -12,14 +12,14 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     publicPath: './',
-    assetModuleFilename: 'assets/images/[hash][ext][query]',
+    assetModuleFilename: 'assets/images/[hash][ext][query]'
   },
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: {
       '@components': path.resolve(__dirname, 'src/components/'),
-      '@styles': path.resolve(__dirname, 'src/styles/'),
-    },
+      '@styles': path.resolve(__dirname, 'src/styles/')
+    }
   },
   mode: 'production',
   module: {
@@ -28,20 +28,25 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-        },
+          loader: 'babel-loader'
+        }
       },
       {
         test: /\.html$/,
-        use: [{ loader: 'html-loader' }],
+        use: [{ loader: 'html-loader' }]
       },
       {
         test: /\.(s[ac]ss|css)$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
+        ]
       },
       {
         test: /\.png/,
-        type: 'asset/resource',
+        type: 'asset/resource'
       },
       {
         test: /\.(woff|woff2|ttf|svg|eot)$/,
@@ -52,20 +57,20 @@ module.exports = {
             name: '[name].[ext]',
             outputPath: './assets/fonts/',
             publicPath: 'fonts/',
-            esModule: false,
-          },
-        },
-      },
-    ],
+            esModule: false
+          }
+        }
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
       template: './public/index.html',
-      filename: './index.html',
+      filename: './index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: 'assets/[name][contenthash].css',
+      filename: 'assets/[name][contenthash].css'
     }),
     // new CopyWebpackPlugin({
     //   patterns: [
@@ -75,10 +80,10 @@ module.exports = {
     //     },
     //   ],
     // }),
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin()
   ],
   optimization: {
     minimize: true,
-    minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
-  },
+    minimizer: [new CssMinimizerPlugin(), new TerserPlugin()]
+  }
 };
