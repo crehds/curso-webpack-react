@@ -5,14 +5,11 @@
   align-items: center;
   margin: 0 auto;
   padding: 1em 0;
+  & img {
+    width: 32px;
+    height: 32px;
+  }
+  & a {
+    text-decoration: none;
+  }
 }
-
-.card_social img {
-  width: 32px;
-  height: 32px;
-}
-
-.card_social a {
-  text-decoration: none;
-}
-
