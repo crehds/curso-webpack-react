@@ -8,7 +8,7 @@
   overflow: hidden;
   text-align: center;
   z-index: 5;
-  & :after {
+  &::after {
     content: '';
     display: block;
     position: absolute;
