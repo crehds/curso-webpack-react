@@ -8,10 +8,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    assetModuleFilename: 'assets/images/[hash][ext][query]',
+    assetModuleFilename: 'assets/images/[hash][ext][query]'
   },
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx']
   },
   mode: 'development',
   module: {
@@ -20,21 +20,21 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
-        },
+          loader: 'babel-loader'
+        }
       },
       {
         test: /\.html$/,
-        use: [{ loader: 'html-loader' }],
+        use: [{ loader: 'html-loader' }]
       },
       {
         test: /\.(s[ac]ss|css)$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
       },
 
       {
         test: /\.png/,
-        type: 'asset/resource',
+        type: 'asset/resource'
       },
       {
         test: /\.(woff|woff2|ttf|svg|eot)$/,
@@ -45,33 +45,35 @@ module.exports = {
             name: '[name].[ext]',
             outputPath: './assets/fonts/',
             publicPath: './assets/fonts/',
-            esModule: false,
-          },
-        },
-      },
-    ],
+            esModule: false
+          }
+        }
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
       template: './public/index.html',
-      filename: './index.html',
+      filename: './index.html'
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: '[name].css'
     }),
     new CopyWebpackPlugin({
       patterns: [
         {
           from: path.resolve(__dirname, 'src', 'assets/images/'),
-          to: 'assets/images',
-        },
-      ],
-    }),
+          to: 'assets/images'
+        }
+      ]
+    })
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    static: {
+      directory: path.join(__dirname, 'dist')
+    },
     compress: true,
-    port: 3006,
-  },
+    port: 3006
+  }
 };
