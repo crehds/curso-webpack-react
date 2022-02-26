@@ -7,8 +7,8 @@ import './styles.css';
 export const Card = (props) => {
   return (
     <div className='card'>
-      <CardDetails src={props.picture.large} name={props.name}/>
-      <CardUserData email={props.email} country={props.location.country}/>
+      <CardDetails src={props.avatar_url} name={props.name} />
+      <CardUserData email={props.email} country={props.location} />
       <CardSocial />
     </div>
   );
