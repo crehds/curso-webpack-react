@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CleanTerminalPlugin = require('clean-terminal-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -29,7 +30,12 @@ module.exports = {
       },
       {
         test: /\.(s[ac]ss|css)$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'sass-loader'
+        ]
       },
 
       {
@@ -67,7 +73,8 @@ module.exports = {
           to: 'assets/images'
         }
       ]
-    })
+    }),
+    new CleanTerminalPlugin()
   ],
   devServer: {
     static: {

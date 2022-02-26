@@ -2,26 +2,25 @@
   position: relative;
   background: #fff;
   padding: 5px;
-  width: 190px;
-  height: 190px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   margin-bottom: 30px;
   border: 1px solid rgba(0, 0, 0, 0.25);
-}
-
-.card_photo img {
-  width: 150px;
-  border-radius: 50%;
+  & img {
+    width: 120px;
+    border-radius: 50%;
+  }
 }
 
 .card_title {
-  color: #999;
+  color: rgba(160, 160, 170, 0.85);
   font-size: 18px;
   margin: 0;
 }
 
 .card_value {
-  color: #2c2e31;
+  color: rgba(0, 0, 0, 0.85);
   font-size: 38px;
   margin: 5px;
   text-transform: capitalize;
@@ -35,31 +34,30 @@
 
 .circle {
   position: relative;
+  & svg {
+    fill: none;
+    stroke: rgba(110, 150, 180, 0.8);
+    stroke-linecap: round;
+    stroke-width: 3;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 0;
+    animation: stroke-draw 6s ease-out infinite alternate;
+  }
+  & img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
-.circle svg {
-  fill: none;
-  stroke: #8a3ab9;
-  stroke-linecap: round;
-  stroke-width: 3;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 0;
-  animation: stroke-draw 6s ease-out infinite alternate;
-}
-
-.circle img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
 @keyframes stroke-draw {
   from {
-    stroke: #8a3ab9;
+    stroke: rgba(110, 150, 180, 0.8);
     stroke-dasharray: 1;
   }
   to {
-    stroke: #cb486b;
+    stroke: rgba(170, 40, 40, 0.85);
     transform: rotate(180deg);
     stroke-dasharray: 8;
   }
