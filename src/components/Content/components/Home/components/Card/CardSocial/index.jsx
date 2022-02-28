@@ -1,8 +1,8 @@
 import React from 'react';
 import './styles.css';
-import twitter from '../../../assets/images/twitter.png';
-import github from '../../../assets/images/github.png';
-import facebook from '../../../assets/images/facebook.png';
+import twitter from '../../../../../../../assets/images/twitter.png';
+import github from '../../../../../../../assets/images/github.png';
+import facebook from '../../../../../../../assets/images/facebook.png';
 
 export const CardSocial = () => {
   return (
