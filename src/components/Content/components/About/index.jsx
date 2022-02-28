@@ -1,10 +1,6 @@
 import React from 'react';
-import { Card } from '../Home/components/Card';
+import { Card } from '../reusable/Card';
 
-export function About(props) {
-  return (
-    <div className='About--container'>
-      <Card {...props} />
-    </div>
-  );
+export function About() {
+  return <Card />;
 }

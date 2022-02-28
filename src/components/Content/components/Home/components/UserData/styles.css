@@ -1,0 +1,23 @@
+.userdata--container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.userdata--container li {
+  display: inline-block;
+  margin: 0 1em 0 0;
+  color: rgba(160, 160, 170, 0.85);
+}
+
+.userdata--profession {
+  color: rgba(160, 160, 170, 0.85);
+  font-size: 18px;
+  margin: 2px;
+}
+
+.userdata--name {
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 38px;
+  margin: 10px 0;
+  text-transform: capitalize;
+}

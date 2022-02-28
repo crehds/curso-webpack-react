@@ -1,12 +1,12 @@
 import React from 'react';
 import './styles.css';
-import twitter from '../../../../../../../assets/images/twitter.png';
-import github from '../../../../../../../assets/images/github.png';
-import facebook from '../../../../../../../assets/images/facebook.png';
+import twitter from '../../../../../../assets/images/twitter.png';
+import github from '../../../../../../assets/images/github.png';
+import facebook from '../../../../../../assets/images/facebook.png';
 
-export const CardSocial = () => {
+export const SocialMedia = () => {
   return (
-    <div className='card_social'>
+    <div className='SocialMedia--container'>
       <a href='https://twitter.com/crehds1' target='_blank'>
         <img src={twitter} alt='logo de twitter' />
       </a>
