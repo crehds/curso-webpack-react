@@ -1,10 +1,13 @@
 import React from 'react';
 import './styles.css';
 
-export const Photo = (props) => {
+export const Photo = ({
+  src = 'https://avatars.githubusercontent.com/u/42285802?v=4',
+  name
+}) => {
   return (
     <div className='Photo--container center circle'>
-      <img src={props.src} alt={`imagen de ${props.name}`} />
+      <img src={src} alt={`imagen de ${name}`} />
       <svg
         viewBox='0 0 100 100'
         xmlns='http://www.w3.org/2000/svg'

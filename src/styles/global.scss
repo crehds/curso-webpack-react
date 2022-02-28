@@ -4,6 +4,19 @@ $fieldSet-color: silver;
 $global-font: 'Ubuntu';
 
 @font-face {
+  font-family: 'icomoon';
+  src: url('../assets/icomoon/fonts/icomoon.eot?bg4igm');
+  src: url('../assets/icomoon/fonts/icomoon.eot?bg4igm#iefix')
+      format('embedded-opentype'),
+    url('../assets/icomoon/fonts/icomoon.ttf?bg4igm') format('truetype'),
+    url('../assets/icomoon/fonts/icomoon.woff?bg4igm') format('woff'),
+    url('../assets/icomoon/fonts/icomoon.svg?bg4igm#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
   font-family: 'Ubuntu';
   src: url('../assets/fonts/ubuntu-v15-latin_cyrillic-regular.eot')
       format('embedded-opentype'),
@@ -233,4 +246,92 @@ table {
 td,
 th {
   padding: 0;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  // color: gray;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-css3:before {
+  content: '\e901';
+  color: #1572b6;
+}
+.icon-html5:before {
+  content: '\e900';
+  color: #e34f26;
+}
+.icon-adobephotoshop:before {
+  content: '\e903';
+  color: #00c8ff;
+}
+.icon-sass:before {
+  content: '\e904';
+  color: #c69;
+}
+.icon-mysql:before {
+  content: '\e905';
+  color: #4479a1;
+}
+.icon-rails:before {
+  content: '\e906';
+  color: #c00;
+}
+.icon-ruby:before {
+  content: '\e907';
+  color: #cc342d;
+}
+.icon-git:before {
+  content: '\e908';
+  color: #f05032;
+}
+.icon-postman:before {
+  content: '\e909';
+  color: #ff6c37;
+}
+.icon-webpack:before {
+  content: '\e90a';
+  color: #8dd6f9;
+}
+.icon-firebase:before {
+  content: '\e90b';
+  color: #ffca28;
+}
+.icon-mongodb:before {
+  content: '\e90c';
+  color: #47a248;
+}
+.icon-styled-components:before {
+  content: '\e90d';
+  color: #db7093;
+}
+.icon-node-dot-js:before {
+  content: '\e90e';
+  color: #393;
+}
+.icon-redux:before {
+  content: '\e90f';
+  color: #764abc;
+}
+.icon-react:before {
+  content: '\e910';
+  color: #61dafb;
+}
+.icon-javascript:before {
+  content: '\e902';
+  color: #f7df1e;
+}
+.icon-terminal:before {
+  content: '\ea81';
 }
