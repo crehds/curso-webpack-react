@@ -8,7 +8,8 @@
     display: flex;
     padding: 0;
     margin: 0;
-    & li {
+    & a {
+      cursor: pointer;
       margin: 4px 12px;
     }
   }

@@ -6,18 +6,18 @@ export function NavBar({ setAppContent }) {
   return (
     <nav className='navbar--container'>
       <ul className='options--wrapped'>
-        <li id='home' onClick={handleOption}>
+        <a id='home' onClick={handleOption}>
           Home
-        </li>
-        <li id='about' onClick={handleOption}>
+        </a>
+        <a id='about' onClick={handleOption}>
           About Me
-        </li>
-        <li id='portfolio' onClick={handleOption}>
+        </a>
+        <a id='portfolio' onClick={handleOption}>
           Portfolio
-        </li>
-        <li id='contact' onClick={handleOption}>
+        </a>
+        <a id='contact' onClick={handleOption}>
           Contact
-        </li>
+        </a>
       </ul>
     </nav>
   );
