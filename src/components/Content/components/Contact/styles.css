@@ -1,0 +1,41 @@
+.Contact {
+  margin: 2px;
+  border: 1px solid silver;
+  display: flex;
+  flex-wrap: wrap;
+  height: 80vh;
+  padding: 0 8px;
+  & form {
+    margin: 10px 5px;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-row-gap: 15px;
+    width: 100%;
+    & div {
+      display: grid;
+      grid-template-columns: minmax(35px, 70px) 1fr;
+      grid-column-gap: 3px;
+    }
+    & div:nth-of-type(4) {
+      display: flex;
+      justify-content: center;
+      & button {
+        padding: 6px;
+      }
+    }
+  }
+}
+
+.contact--wp {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  & p {
+    width: 100%;
+    & a {
+      text-decoration: none;
+      padding: 0 4px;
+    }
+  }
+}
