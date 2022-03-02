@@ -1,5 +1,6 @@
 .Portfolio {
-  padding: 0px 15px;
+  margin: 0px 15px;
+  display: grid;
 }
 
 .portfolio--title {
@@ -16,7 +17,11 @@
   @media (min-width: 800px) {
     grid-template-rows: repeat(3, 400px);
     grid-column-gap: 25px;
-    grid-template-columns: minmax(320px, 500px) minmax(320px, 500px);
+    grid-template-columns: repeat(2, minmax(320px, 500px));
+  }
+  @media (min-width: 1280px) {
+    grid-template-rows: repeat(2, 400px);
+    grid-template-columns: repeat(3, minmax(350px, 600px));
   }
 }
 
@@ -39,7 +44,6 @@
     }
   }
   & div {
-    /* margin-top: 10px; */
     max-width: 100%;
     max-height: 100%;
     & img {

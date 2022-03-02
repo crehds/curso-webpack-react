@@ -8,8 +8,17 @@ import eyl from '../../../../assets/images/eyl_screenshot.png';
 import juego from '../../../../assets/images/juego_screenshot.png';
 import bachatealo from '../../../../assets/images/bachatealo_screenshot.png';
 import marielis from '../../../../assets/images/marielis_screenshot.png';
+import { useGetWidth } from '../../../../hooks/useGetWidth';
+import { useEffect } from 'react';
 
 export function Portfolio() {
+  const width = useGetWidth();
+
+  useEffect(() => {
+    const portfolio = document.querySelector('.Portfolio');
+    portfolio.style.width = `${width}px`;
+  }, [width]);
+
   return (
     <div className='Portfolio'>
       <div className='portfolio--title'>
@@ -42,7 +51,7 @@ export function Portfolio() {
         </div>
         <div className='project--container'>
           <a href='https://marielis.vercel.app/' target='_blank'>
-            <p>JUEGO CON TECLADO</p>
+            <p>MARIELIS PASTELERIA</p>
           </a>
           <div className='project--image--container'>
             <img src={marielis} alt='' />
