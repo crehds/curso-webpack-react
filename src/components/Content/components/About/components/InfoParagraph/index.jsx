@@ -21,7 +21,6 @@ export function InfoParagraph() {
         <i className='icon-mysql'></i>
         <i className='icon-rails'></i>
         <i className='icon-ruby'></i>
-        <i className='icon-git'></i>
         <i className='icon-postman'></i>
         <i className='icon-webpack'></i>
         <i className='icon-firebase'></i>
@@ -30,6 +29,7 @@ export function InfoParagraph() {
         <i className='icon-node-dot-js'></i>
         <i className='icon-redux'></i>
         <i className='icon-terminal'></i>
+        <i className='icon-adobephotoshop'></i>
       </div>
     </div>
   );

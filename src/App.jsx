@@ -7,7 +7,7 @@ import { Loader } from './loader';
 import { Content } from './components/Content';
 
 const App = () => {
-  const [appContent, setAppContent] = useState('home');
+  const [appContent, setAppContent] = useState('portfolio');
   const [user, loading] = useGetData(true);
 
   return (
