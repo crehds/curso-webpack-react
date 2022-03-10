@@ -7,7 +7,7 @@ import { Loader } from './loader';
 import { Content } from './components/Content';
 
 const App = () => {
-  const [appContent, setAppContent] = useState('contact');
+  const [appContent, setAppContent] = useState('home');
   const [user, loading] = useGetData(true);
 
   return (

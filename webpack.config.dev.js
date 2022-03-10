@@ -77,6 +77,7 @@ module.exports = {
     new CleanTerminalPlugin()
   ],
   devServer: {
+    open: true,
     static: {
       directory: path.join(__dirname, 'dist')
     },

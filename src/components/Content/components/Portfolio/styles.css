@@ -6,6 +6,10 @@
 .portfolio--title {
   color: gray;
   text-align: center;
+  font-size: 24px;
+  & h2 {
+    margin-top: 0.4em;
+  }
 }
 
 .projects--container {

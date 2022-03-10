@@ -1,10 +1,16 @@
 .Contact {
-  margin: 2px;
+  margin: 0 3%;
   border: 1px solid silver;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   height: 80vh;
-  padding: 0 8px;
+  padding: 0 1em;
+  grid-template-rows: 5em auto 1fr;
+  @media (min-width: 700px) {
+    margin: 0 6%;
+  }
+  @media (min-width: 1050px) {
+    margin: 0 10%;
+  }
   & form {
     margin: 10px 5px;
     display: grid;
@@ -21,8 +27,23 @@
       justify-content: center;
       & button {
         padding: 6px;
+        border-radius: 4px;
+        &:hover {
+          background-color: rgba(75, 75, 75, 0.5);
+        }
       }
     }
+  }
+}
+
+.contact--title {
+  width: 100%;
+  text-align: center;
+  margin: auto 0;
+  font-size: 24px;
+  & h2 {
+    margin: 0;
+    color: gray;
   }
 }
 
@@ -31,6 +52,7 @@
   text-align: center;
   display: flex;
   align-items: center;
+  font-size: 18px;
   & p {
     width: 100%;
     & a {

@@ -8,13 +8,19 @@ export function Contact() {
   }
   return (
     <div className='Contact'>
+      <div className='contact--title'>
+        <h2>Trabajemos juntos</h2>
+      </div>
       <div className='contact--wp'>
         <p>
           Escríbeme a mi{' '}
           <a href='https://wa.me/51960265942' target='_blank'>
             <i className='icon-whatsapp'></i>
           </a>
-          o envíame un correo
+          o envíame un{' '}
+          <a href='https://wa.me/51960265942' target='_blank'>
+            <i className='icon-gmail'></i>
+          </a>
         </p>
       </div>
       <form action='' onSubmit={onSubmit}>
