@@ -1,29 +1,16 @@
-.card_photo {
+.Photo--container {
   position: relative;
   background: #fff;
   padding: 5px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   border: 1px solid rgba(0, 0, 0, 0.25);
   & img {
     width: 120px;
     border-radius: 50%;
   }
-}
-
-.card_title {
-  color: rgba(160, 160, 170, 0.85);
-  font-size: 18px;
-  margin: 0;
-}
-
-.card_value {
-  color: rgba(0, 0, 0, 0.85);
-  font-size: 38px;
-  margin: 5px;
-  text-transform: capitalize;
 }
 
 .center {
