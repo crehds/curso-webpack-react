@@ -264,6 +264,12 @@ th {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-x-altx-alt:before {
+  content: '\e914';
+}
+.icon-terminal:before {
+  content: '\ea81';
+}
 .icon-gmail:before {
   content: '\e912';
   color: #d14836;
@@ -340,6 +346,6 @@ th {
   content: '\e902';
   color: #f7df1e;
 }
-.icon-terminal:before {
-  content: '\ea81';
+.icon-check-circle:before {
+  content: '\e913';
 }
