@@ -1,14 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Modal } from '../Modal';
+import { ErrorModal } from '../Modal/components/ErrorModal';
+import { LoadingModal } from '../Modal/components/LoadingModal';
+import { SuccessModal } from '../Modal/components/SuccessModal';
 
 import './styles.css';
 
 export function Contact() {
-  function onSubmit(e) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [modalState, setModalState] = useState({
+    loading: true,
+    success: false,
+    error: false
+  });
+  async function onSubmit(e) {
     e.preventDefault();
-    emailjs
-      .sendForm('service_xcf4f4j', 'template_nqy8aeh', '#contact-form')
-      .then(() => console.log('success'));
+    const formContact = document.querySelector('form');
+    setIsOpen(true);
+    try {
+      // eslint-disable-next-line no-undef
+      await emailjs.sendForm(
+        'service_xcf4f4j',
+        'template_nqy8aeh',
+        '#contact-form'
+      );
+      setModalState((prevState) => ({
+        ...prevState,
+        loading: false,
+        success: true
+      }));
+    } catch (error) {
+      setModalState((prevState) => ({
+        ...prevState,
+        loading: false,
+        error: true
+      }));
+      console.log(error);
+    }
+
+    formContact.reset();
   }
+
   return (
     <div className='Contact'>
       <div className='contact--title'>
@@ -16,11 +48,11 @@ export function Contact() {
       </div>
       <div className='contact--wp'>
         <p>
-          Escríbeme a mi{' '}
+          Escríbeme a mi
           <a href='https://wa.me/51960265942' target='_blank'>
             <i className='icon-whatsapp'></i>
           </a>
-          o envíame un{' '}
+          o envíame un
           <a href='https://wa.me/51960265942' target='_blank'>
             <i className='icon-gmail'></i>
           </a>
@@ -49,6 +81,18 @@ export function Contact() {
           <button type='submit'>Enviar</button>
         </div>
       </form>
+      {isOpen && (
+        <Modal
+          modalState={{ ...modalState }}
+          onLoading={() => <LoadingModal />}
+          onSuccess={() => (
+            <SuccessModal setStateModal={setModalState} setIsOpen={setIsOpen} />
+          )}
+          onError={() => (
+            <ErrorModal setStateModal={setModalState} setIsOpen={setIsOpen} />
+          )}
+        />
+      )}
     </div>
   );
 }

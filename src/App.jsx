@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { AppContent } from './pages/AppContent';
 import { NavBar } from './components/Navbar';
 import { useGetData } from './hooks/useGetData';
-import { Loader } from './loader';
+import { Loader1 } from './loaders/loader1';
 import { Content } from './components/Content';
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
     <>
       <NavBar setAppContent={setAppContent} />
 
-      <AppContent loading={loading} onLoading={() => <Loader />}>
+      <AppContent loading={loading} onLoading={() => <Loader1 />}>
         <Content content={appContent} user={{ ...user }} />
       </AppContent>
     </>
