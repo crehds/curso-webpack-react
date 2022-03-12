@@ -12,14 +12,10 @@ export function StateModal(props) {
     props.setIsOpen(false);
   }
   return (
-    <div className={`wrappedModal--${props.stateModal}`}>
+    <div className={`wrappedModal wrappedModal--${props.stateModal}`}>
       <i className={`${props.iconModal} ${props.stateModal}`}></i>
-      <div className={`title--${props.stateModal}`}>{props.titleModal}</div>
-      <button
-        type='button'
-        onClick={handleButton}
-        className={`button--${props.stateModal}`}
-      >
+      <div className={`titleModal`}>{props.titleModal}</div>
+      <button type='button' onClick={handleButton}>
         Aceptar
       </button>
     </div>
