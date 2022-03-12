@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   padding-top: 15px;
-  /* align-items: center; */
   & .options--wrapped {
     list-style-type: none;
     display: flex;
@@ -11,6 +10,11 @@
     & a {
       cursor: pointer;
       margin: 4px 12px;
+      &.active {
+        font-weight: bold;
+        border-bottom: 2px solid rgba(50, 50, 50, 0.8);
+        padding-bottom: 4px;
+      }
     }
   }
 }
