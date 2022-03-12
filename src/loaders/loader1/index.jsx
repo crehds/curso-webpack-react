@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 
-export function Loader() {
+export function Loader1() {
   return (
     <div className='loader--container'>
       <div className='loader--dots--container'>

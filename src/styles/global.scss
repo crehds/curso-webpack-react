@@ -1,4 +1,4 @@
-$base-color: #f9f9f9;
+$base-color: rgb(240, 240, 240, 0.7);
 $color: rgba(black, 0.38);
 $fieldSet-color: silver;
 $global-font: 'Ubuntu';
@@ -41,6 +41,7 @@ body {
   color: $color;
   margin: 0;
   font-family: $global-font;
+  min-height: 100vh;
 }
 article,
 aside,
@@ -264,6 +265,12 @@ th {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-x-altx-alt:before {
+  content: '\e914';
+}
+.icon-terminal:before {
+  content: '\ea81';
+}
 .icon-gmail:before {
   content: '\e912';
   color: #d14836;
@@ -340,6 +347,6 @@ th {
   content: '\e902';
   color: #f7df1e;
 }
-.icon-terminal:before {
-  content: '\ea81';
+.icon-check-circle:before {
+  content: '\e913';
 }

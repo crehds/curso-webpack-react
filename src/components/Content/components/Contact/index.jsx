@@ -1,11 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Modal } from './components/Modal';
+import { ErrorModal } from './components/Modal/components/ErrorModal';
+import { LoadingModal } from './components/Modal/components/LoadingModal';
+import { SuccessModal } from './components/Modal/components/SuccessModal';
 
 import './styles.css';
 
 export function Contact() {
-  function onSubmit(e) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [modalState, setModalState] = useState({
+    loading: true,
+    success: false,
+    error: false
+  });
+  async function onSubmit(e) {
     e.preventDefault();
+    const formContact = document.querySelector('form');
+    setIsOpen(true);
+    try {
+      // eslint-disable-next-line no-undef
+      await emailjs.sendForm(
+        'service_xcf4f4j',
+        'template_nqy8aeh',
+        '#contact-form'
+      );
+      setModalState((prevState) => ({
+        ...prevState,
+        loading: false,
+        success: true
+      }));
+    } catch (error) {
+      setModalState((prevState) => ({
+        ...prevState,
+        loading: false,
+        error: true
+      }));
+      console.log(error);
+    }
+
+    formContact.reset();
   }
+
   return (
     <div className='Contact'>
       <div className='contact--title'>
@@ -13,35 +48,51 @@ export function Contact() {
       </div>
       <div className='contact--wp'>
         <p>
-          Escríbeme a mi{' '}
+          Escríbeme a mi
           <a href='https://wa.me/51960265942' target='_blank'>
             <i className='icon-whatsapp'></i>
           </a>
-          o envíame un{' '}
+          o envíame un
           <a href='https://wa.me/51960265942' target='_blank'>
             <i className='icon-gmail'></i>
           </a>
         </p>
       </div>
-      <form action='' onSubmit={onSubmit}>
+      <form action='' onSubmit={onSubmit} id='contact-form'>
         <div>
           <label htmlFor=''>Nombre</label>
-          <input type='text' placeholder='Nombre' />
+          <input type='text' placeholder='Nombre' name='from_name' />
         </div>
 
         <div>
           <label htmlFor=''>E-mail</label>
-          <input type='email' placeholder='Correo electrónico' />
+          <input
+            type='email'
+            placeholder='Correo electrónico'
+            name='from_email'
+          />
         </div>
 
         <div>
           <label htmlFor=''>Mensaje</label>
-          <textarea name='' id='' cols='30' rows='10'></textarea>
+          <textarea name='message' id='' cols='30' rows='10'></textarea>
         </div>
         <div>
           <button type='submit'>Enviar</button>
         </div>
       </form>
+      {isOpen && (
+        <Modal
+          modalState={{ ...modalState }}
+          onLoading={() => <LoadingModal />}
+          onSuccess={() => (
+            <SuccessModal setStateModal={setModalState} setIsOpen={setIsOpen} />
+          )}
+          onError={() => (
+            <ErrorModal setStateModal={setModalState} setIsOpen={setIsOpen} />
+          )}
+        />
+      )}
     </div>
   );
 }
