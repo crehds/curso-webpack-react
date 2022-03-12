@@ -29,49 +29,73 @@ export function Portfolio() {
           <a href='https://pysa.vercel.app' target='_blank'>
             <p>PYSA GAMING</p>
           </a>
-          <div className='project--image--container'>
+          <a
+            className='project--image--container'
+            href='https://pysa.vercel.app'
+            target='_blank'
+          >
             <img src={pysa} alt='' />
-          </div>
+          </a>
         </div>
         <div className='project--container'>
           <a href='https://hagaloverde.vercel.app/' target='_blank'>
             <p>HAGALO VERDE</p>
           </a>
-          <div className='project--image--container'>
+          <a
+            className='project--image--container'
+            href='https://hagaloverde.vercel.app/'
+            target='_blank'
+          >
             <img src={hagaloVerde} alt='' />
-          </div>
+          </a>
         </div>
         <div className='project--container'>
           <a href='https://crehds.github.io/eyl/' target='_blank'>
             <p>EXPRESION LATINA</p>
           </a>
-          <div className='project--image--container'>
+          <a
+            className='project--image--container'
+            href='https://crehds.github.io/eyl/'
+            target='_blank'
+          >
             <img src={eyl} alt='' />
-          </div>
+          </a>
         </div>
         <div className='project--container'>
           <a href='https://marielis.vercel.app/' target='_blank'>
             <p>MARIELIS PASTELERIA</p>
           </a>
-          <div className='project--image--container'>
+          <a
+            className='project--image--container'
+            href='https://marielis.vercel.app/'
+            target='_blank'
+          >
             <img src={marielis} alt='' />
-          </div>
+          </a>
         </div>
         <div className='project--container'>
           <a href='https://crehds.github.io/bachatealo' target='_blank'>
             <p>BACHATEALO</p>
           </a>
-          <div className='project--image--container'>
+          <a
+            className='project--image--container'
+            href='https://crehds.github.io/bachatealo'
+            target='_blank'
+          >
             <img src={bachatealo} alt='' />
-          </div>
+          </a>
         </div>
         <div className='project--container'>
           <a href='https://game-with-keyboard.vercel.app/' target='_blank'>
             <p>JUEGO CON TECLADO</p>
           </a>
-          <div className='project--image--container'>
+          <a
+            className='project--image--container'
+            href='https://game-with-keyboard.vercel.app/'
+            target='_blank'
+          >
             <img src={juego} alt='' />
-          </div>
+          </a>
         </div>
       </div>
     </div>
