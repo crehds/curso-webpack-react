@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Modal } from '../Modal';
-import { ErrorModal } from '../Modal/components/ErrorModal';
-import { LoadingModal } from '../Modal/components/LoadingModal';
-import { SuccessModal } from '../Modal/components/SuccessModal';
+import { Modal } from './components/Modal';
+import { ErrorModal } from './components/Modal/components/ErrorModal';
+import { LoadingModal } from './components/Modal/components/LoadingModal';
+import { SuccessModal } from './components/Modal/components/SuccessModal';
 
 import './styles.css';
 
