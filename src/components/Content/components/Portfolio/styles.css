@@ -32,7 +32,7 @@
 .project--container {
   box-shadow: 0 -4px 5px 1px rgba(205, 205, 205, 0.85);
   padding-top: 5px;
-
+  border-radius: 5px;
   display: grid;
   grid-template-rows: 30px minmax(320px, 365px);
   & a {
@@ -47,7 +47,7 @@
       }
     }
   }
-  & div {
+  & a {
     width: 100%;
     height: 100%;
     & img {
