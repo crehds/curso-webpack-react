@@ -10,11 +10,35 @@
     & a {
       cursor: pointer;
       margin: 4px 12px;
-      &.active {
-        font-weight: bold;
-        border-bottom: 2px solid rgba(50, 50, 50, 0.8);
+      display: inline-block;
+      &.option {
         padding-bottom: 4px;
+        &.active {
+          font-weight: bold;
+        }
       }
     }
   }
+}
+
+.option::after {
+  padding-top: 4px;
+  display: block;
+  content: '';
+  transform-origin: 0% 50%;
+  transition: transform 500ms ease-in-out;
+}
+
+.active::after {
+  border-bottom: solid 3px rgba(68, 70, 90, 0.85);
+  transform: scaleX(1);
+}
+
+.inactive::after {
+  border-bottom: solid 3px rgba(175, 103, 70, 0.9);
+  transform: scaleX(0);
+}
+
+.inactive:hover::after {
+  transform: scaleX(1);
 }
