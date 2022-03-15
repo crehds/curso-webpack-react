@@ -53,9 +53,7 @@ export function Contact() {
             <i className='icon-whatsapp'></i>
           </a>
           o envíame un
-          <a href='https://wa.me/51960265942' target='_blank'>
-            <i className='icon-gmail'></i>
-          </a>
+          <i className='icon-gmail'></i>
         </p>
       </div>
       <form action='' onSubmit={onSubmit} id='contact-form'>

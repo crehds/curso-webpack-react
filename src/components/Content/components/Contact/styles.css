@@ -58,7 +58,13 @@
     width: 100%;
     & a {
       text-decoration: none;
-      padding: 0 4px;
+      & i {
+        margin: 5px;
+        padding: 3px;
+      }
+    }
+    & i {
+      padding: 0 8px;
     }
   }
 }
