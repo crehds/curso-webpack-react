@@ -71,10 +71,32 @@
       & i {
         margin: 5px;
         padding: 3px;
+        animation: infinite 5s ease-in-out Opacity 3s;
+        &:hover {
+          animation-play-state: paused;
+        }
       }
     }
     & i {
       padding: 0 8px;
     }
+  }
+}
+
+@keyframes Opacity {
+  10% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
