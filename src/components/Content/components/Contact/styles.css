@@ -5,6 +5,7 @@
   height: 80vh;
   padding: 0 1em;
   grid-template-rows: 5em auto 1fr;
+  overflow-y: auto;
   @media (min-width: 700px) {
     margin: 0 6%;
   }
@@ -57,7 +58,13 @@
     width: 100%;
     & a {
       text-decoration: none;
-      padding: 0 4px;
+      & i {
+        margin: 5px;
+        padding: 3px;
+      }
+    }
+    & i {
+      padding: 0 8px;
     }
   }
 }
