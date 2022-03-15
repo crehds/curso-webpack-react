@@ -23,8 +23,14 @@
       grid-template-columns: minmax(35px, 70px) 1fr;
       grid-column-gap: 3px;
       align-items: center;
+      &:nth-of-type(4) {
+        padding: 10px 0 5px;
+      }
       & label {
         text-align: left;
+      }
+      & textarea {
+        height: 100%;
       }
     }
     & div:nth-of-type(5) {
