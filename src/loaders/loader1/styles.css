@@ -27,31 +27,31 @@
     animation: Wave 2s ease-out infinite;
   }
   &:nth-child(1) {
-    background-color: rgba(238, 211, 214, 0.89);
-    ::before {
+    background-color: rgba(180, 180, 180, 0.5);
+    &::before {
       animation-delay: 0.2s;
     }
   }
   &:nth-child(2) {
-    background-color: rgba(196, 84, 93, 0.692);
+    background-color: rgba(130, 130, 130, 0.8);
     &::before {
       animation-delay: 0.4s;
     }
   }
   &:nth-child(3) {
-    background-color: rgba(218, 61, 82, 0.76);
+    background-color: rgba(103, 112, 157, 0.76);
     &::before {
       animation-delay: 0.6s;
     }
   }
   &:nth-child(4) {
-    background-color: rgba(230, 17, 45, 0.678);
+    background-color: rgba(50, 54, 165, 0.8);
     &::before {
       animation-delay: 0.8s;
     }
   }
   &:nth-child(5) {
-    background-color: rgba(245, 4, 36, 0.89);
+    background-color: rgba(40, 49, 151, 0.89);
     &::before {
       animation-delay: 1s;
     }
