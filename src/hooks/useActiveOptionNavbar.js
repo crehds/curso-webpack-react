@@ -6,6 +6,7 @@ export function useActiveOptionNavBar(initialActiveOption) {
 
   useEffect(() => {
     const activeOption = document.getElementById(activeOptionNavBar);
+    activeOption.classList.remove('inactive');
     activeOption.classList.add('active');
   }, [activeOptionNavBar]);
   return setActiveOptionNavBar;

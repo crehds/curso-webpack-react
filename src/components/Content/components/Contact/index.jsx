@@ -72,8 +72,19 @@ export function Contact() {
         </div>
 
         <div>
+          <label htmlFor=''>Teléfono</label>
+          <input type='tel' placeholder='Número telefónico' name='from_phone' />
+        </div>
+
+        <div>
           <label htmlFor=''>Mensaje</label>
-          <textarea name='message' id='' cols='30' rows='10'></textarea>
+          <textarea
+            name='message'
+            id=''
+            cols='30'
+            rows='8'
+            placeholder='Déjame un mensaje...'
+          ></textarea>
         </div>
         <div>
           <button type='submit'>Enviar</button>

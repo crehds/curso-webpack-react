@@ -15,15 +15,25 @@
   & form {
     margin: 10px 5px;
     display: grid;
-    grid-template-rows: auto auto 1fr auto;
+    grid-template-rows: auto auto auto 1fr auto;
     grid-row-gap: 15px;
     width: 100%;
     & div {
       display: grid;
       grid-template-columns: minmax(35px, 70px) 1fr;
       grid-column-gap: 3px;
+      align-items: center;
+      &:nth-of-type(4) {
+        padding: 10px 0 5px;
+      }
+      & label {
+        text-align: left;
+      }
+      & textarea {
+        height: 100%;
+      }
     }
-    & div:nth-of-type(4) {
+    & div:nth-of-type(5) {
       display: flex;
       justify-content: center;
       & button {
@@ -61,10 +71,32 @@
       & i {
         margin: 5px;
         padding: 3px;
+        animation: infinite 5s ease-in-out Opacity 3s;
+        &:hover {
+          animation-play-state: paused;
+        }
       }
     }
     & i {
       padding: 0 8px;
     }
+  }
+}
+
+@keyframes Opacity {
+  10% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
