@@ -3,17 +3,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanTerminalPlugin = require('clean-terminal-webpack-plugin');
-const postcssPresetEnv = require('postcss-preset-env');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js',
+    filename: 'bundle.[contenthash].js',
     assetModuleFilename: 'assets/images/[hash][ext][query]'
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
   },
   mode: 'development',
   devtool: 'source-map',
@@ -35,14 +34,7 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          {
-            loader: 'postcss-loader',
-            options: {
-              postcssOptions: {
-                plugins: [postcssPresetEnv()]
-              }
-            }
-          },
+          'postcss-loader',
           'sass-loader'
         ]
       },
