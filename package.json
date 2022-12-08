@@ -19,6 +19,18 @@
     "url": "https://github.com/platzi/curso-webpack-react/issues"
   },
   "homepage": "https://github.com/platzi/curso-webpack-react#readme",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "dependencies": {
     "@babel/runtime": "^7.13.10",
     "css-loader": "^5.2.0",
