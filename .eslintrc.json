@@ -4,14 +4,7 @@
     "es2021": true
   },
   "extends": ["eslint:recommended", "plugin:react/recommended"],
-  "overrides": [
-    {
-      "files": ["postcss.config.js"],
-      "env": {
-        "node": true
-      }
-    }
-  ],
+  "overrides": [],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
