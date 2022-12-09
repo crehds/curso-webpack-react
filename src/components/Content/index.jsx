@@ -1,8 +1,9 @@
 import React from 'react';
-import { About } from './components/About';
-import { Contact } from './components/Contact';
-import { Home } from './components/Home';
-import { Portfolio } from './components/Portfolio';
+
+const Home = React.lazy(() => import('./components/Home'));
+const About = React.lazy(() => import('./components/About'));
+const Portfolio = React.lazy(() => import('./components/Portfolio'));
+const Contact = React.lazy(() => import('./components/Contact'));
 
 export function Content(props) {
   switch (props.content) {

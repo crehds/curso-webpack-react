@@ -6,7 +6,7 @@ import { SuccessModal } from './components/Modal/components/SuccessModal';
 
 import './styles.css';
 
-export function Contact() {
+function Contact() {
   const [isOpen, setIsOpen] = useState(false);
   const [modalState, setModalState] = useState({
     loading: true,
@@ -105,3 +105,5 @@ export function Contact() {
     </div>
   );
 }
+
+export default Contact;

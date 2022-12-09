@@ -11,7 +11,7 @@ import marielis from '../../../../assets/images/marielis_screenshot.png';
 import { useGetWidth } from '../../../../hooks/useGetWidth';
 import { useEffect } from 'react';
 
-export function Portfolio() {
+function Portfolio() {
   const width = useGetWidth();
 
   useEffect(() => {
@@ -101,3 +101,5 @@ export function Portfolio() {
     </div>
   );
 }
+
+export default Portfolio;

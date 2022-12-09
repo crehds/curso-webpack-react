@@ -3,7 +3,7 @@ import { Card } from '../reusable/Card';
 import { Photo } from '../reusable/Photo';
 import { InfoParagraph } from './components/InfoParagraph';
 
-export function About() {
+function About() {
   return (
     <Card>
       <Photo />
@@ -11,3 +11,5 @@ export function About() {
     </Card>
   );
 }
+
+export default About;
