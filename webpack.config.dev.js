@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanTerminalPlugin = require('clean-terminal-webpack-plugin');
+const ReactRefreshPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -21,9 +22,7 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader'
-        }
+        use: 'babel-loader'
       },
       {
         test: /\.html$/,
@@ -75,7 +74,8 @@ module.exports = {
         }
       ]
     }),
-    new CleanTerminalPlugin()
+    new CleanTerminalPlugin(),
+    new ReactRefreshPlugin()
   ],
   devServer: {
     open: true,
