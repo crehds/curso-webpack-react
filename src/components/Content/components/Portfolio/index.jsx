@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './styles.css';
 
 import pysa from '../../../../assets/images/pysa_screenshot.png';

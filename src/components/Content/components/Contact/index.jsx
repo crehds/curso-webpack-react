@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Modal } from './components/Modal';
 import { ErrorModal } from './components/Modal/components/ErrorModal';
 import { LoadingModal } from './components/Modal/components/LoadingModal';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Loader2 } from '../../../../../../../../loaders/loader2';
 
 export function LoadingModal() {

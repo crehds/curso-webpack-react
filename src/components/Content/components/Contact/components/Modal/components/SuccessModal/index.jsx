@@ -1,4 +1,3 @@
-import React from 'react';
 import { StateModal } from '../StateModal';
 
 export function SuccessModal(props) {
