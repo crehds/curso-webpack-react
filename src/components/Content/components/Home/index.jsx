@@ -1,11 +1,10 @@
-import React from 'react';
 import { Photo } from '../reusable/Photo';
 import { Card } from '../reusable/Card';
 
 import { UserData } from './components/UserData';
 import { SocialMedia } from './components/SocialMedia';
 
-export const Home = (props) => {
+const Home = (props) => {
   return (
     <Card>
       <Photo src={props.avatar_url} />
@@ -18,3 +17,5 @@ export const Home = (props) => {
     </Card>
   );
 };
+
+export default Home;

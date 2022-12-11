@@ -1,12 +1,14 @@
-import React from 'react';
+import { Suspense } from 'react';
 
 import './AppContent.css';
 
 export function AppContent(props) {
   return (
-    <section className='AppContent'>
-      {props.loading && props.onLoading()}
-      {props.children}
-    </section>
+    <Suspense fallback={<div>Cargando...</div> }>
+      <section className='AppContent'>
+        {props.loading && props.onLoading()}
+        {props.children}
+      </section>
+    </Suspense>
   );
 }

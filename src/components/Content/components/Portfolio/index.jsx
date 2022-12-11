@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './styles.css';
 
 import pysa from '../../../../assets/images/pysa_screenshot.png';
@@ -11,7 +9,7 @@ import marielis from '../../../../assets/images/marielis_screenshot.png';
 import { useGetWidth } from '../../../../hooks/useGetWidth';
 import { useEffect } from 'react';
 
-export function Portfolio() {
+function Portfolio() {
   const width = useGetWidth();
 
   useEffect(() => {
@@ -101,3 +99,5 @@ export function Portfolio() {
     </div>
   );
 }
+
+export default Portfolio;

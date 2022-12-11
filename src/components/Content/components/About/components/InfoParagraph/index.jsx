@@ -1,15 +1,11 @@
-import React from 'react';
-
 import './styles.css';
 
 export function InfoParagraph() {
   return (
     <div className='InfoParagraph'>
-      <p>Hola, bienvenido a mi portafolio digital</p>
       <p>
-        Soy Carlos Rodriguez, y empecé en el aprendizaje web hace 4 años. Debido
-        a ello ,es que cuento con 2 años y medio como desarrollador front-end
-        independiente con fuertes aspiraciones a desarrollador full stack.
+        Empecé en el aprendizaje web hace 7 años. Sin embargo, cuento con 3 años como desarrollador full-stack
+        independiente. Siendo React, Node y Ruby on Rails las tecnologías favoritas de este desarrollador.
       </p>
       <div>
         <i className='icon-react'></i>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Modal } from './components/Modal';
 import { ErrorModal } from './components/Modal/components/ErrorModal';
 import { LoadingModal } from './components/Modal/components/LoadingModal';
@@ -6,7 +6,7 @@ import { SuccessModal } from './components/Modal/components/SuccessModal';
 
 import './styles.css';
 
-export function Contact() {
+function Contact() {
   const [isOpen, setIsOpen] = useState(false);
   const [modalState, setModalState] = useState({
     loading: true,
@@ -105,3 +105,5 @@ export function Contact() {
     </div>
   );
 }
+
+export default Contact;
