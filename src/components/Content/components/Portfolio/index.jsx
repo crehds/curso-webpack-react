@@ -48,12 +48,12 @@ function Portfolio() {
           </a>
         </div>
         <div className='project--container'>
-          <a href='https://crehds.github.io/eyl/' target='_blank'>
+          <a href='https://expresion-latina.vercel.app/' target='_blank'>
             <p>EXPRESION LATINA</p>
           </a>
           <a
             className='project--image--container'
-            href='https://crehds.github.io/eyl/'
+            href='https://expresion-latina.vercel.app/'
             target='_blank'
           >
             <img src={eyl} alt='' />
