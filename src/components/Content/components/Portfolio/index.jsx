@@ -20,7 +20,7 @@ function Portfolio() {
   return (
     <div className='Portfolio'>
       <div className='portfolio--title'>
-        <h2>Últimos Proyectos</h2>
+        <h2>Proyectos</h2>
       </div>
       <div className='projects--container'>
         <div className='project--container'>
