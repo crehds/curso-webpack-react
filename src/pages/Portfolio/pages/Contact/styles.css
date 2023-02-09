@@ -1,0 +1,102 @@
+.Contact {
+  margin: 0 3%;
+  border: 1px solid silver;
+  display: grid;
+  height: 80vh;
+  padding: 0 1em;
+  grid-template-rows: 5em auto 1fr;
+  overflow-y: auto;
+  @media (min-width: 700px) {
+    margin: 0 6%;
+  }
+  @media (min-width: 1050px) {
+    margin: 0 10%;
+  }
+  & form {
+    margin: 10px 5px;
+    display: grid;
+    grid-template-rows: auto auto auto 1fr auto;
+    grid-row-gap: 15px;
+    width: 100%;
+    & div {
+      display: grid;
+      grid-template-columns: minmax(35px, 70px) 1fr;
+      grid-column-gap: 3px;
+      align-items: center;
+      &:nth-of-type(4) {
+        padding: 10px 0 5px;
+      }
+      & label {
+        text-align: left;
+      }
+      & textarea {
+        height: 100%;
+      }
+    }
+    & div:nth-of-type(5) {
+      display: flex;
+      justify-content: center;
+      & button {
+        padding: 6px;
+        border-radius: 4px;
+        &:hover {
+          background-color: rgba(75, 75, 75, 0.5);
+        }
+      }
+    }
+  }
+}
+
+.contact--title {
+  width: 100%;
+  text-align: center;
+  margin: auto 0;
+  font-size: 24px;
+  & h2 {
+    margin: 0;
+    color: gray;
+  }
+}
+
+.contact--wp {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  & p {
+    width: 100%;
+    & a {
+      text-decoration: none;
+      & i {
+        margin: 5px;
+        padding: 3px;
+        animation: infinite 5s ease-in-out Opacity 3s;
+        &:hover {
+          animation-play-state: paused;
+        }
+      }
+    }
+    & i {
+      padding: 0 8px;
+    }
+  }
+}
+
+@keyframes Opacity {
+  10% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
