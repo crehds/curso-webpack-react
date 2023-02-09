@@ -1,7 +1,0 @@
-.AppContent {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  padding: 2em 0;
-  grid-template-columns: minmax(auto, 1024px);
-}
