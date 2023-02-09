@@ -13,22 +13,22 @@ function Contact() {
     success: false,
     error: false
   });
-  async function onSubmit(e) {
-    e.preventDefault();
-    const formContact = document.querySelector('form');
-    setIsOpen(true);
+
+  async function handleEmail() {
     try {
+      const formContact = document.querySelector('form');
       // eslint-disable-next-line no-undef
       await emailjs.sendForm(
         'service_xcf4f4j',
         'template_nqy8aeh',
         '#contact-form'
-      );
+      )
       setModalState((prevState) => ({
         ...prevState,
         loading: false,
         success: true
-      }));
+      }))
+      formContact.reset();
     } catch (error) {
       setModalState((prevState) => ({
         ...prevState,
@@ -37,8 +37,12 @@ function Contact() {
       }));
       console.log(error);
     }
+  }
 
-    formContact.reset();
+  function onSubmit(e) {
+    e.preventDefault();
+    setIsOpen(true);
+    handleEmail();
   }
 
   return (
