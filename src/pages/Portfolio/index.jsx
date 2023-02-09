@@ -17,10 +17,10 @@ export function Portfolio(props) {
     <Suspense fallback={<Loader1 />}>
       <section className='AppContent'>
         <NavBar
-        appContent={page}
-        setAppContent={setPage}
-        setActiveOptionNavBar={setOption}
-      />
+          appContent={page}
+          setAppContent={setPage}
+          setActiveOptionNavBar={setOption}
+        />
         {loading && props.onLoading()}
         <Content page={page} user={user}/>
       </section>
