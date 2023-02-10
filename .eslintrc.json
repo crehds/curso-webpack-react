@@ -36,6 +36,7 @@
         "declaration": "parens-new-line"
       }
     ],
+    "react/jsx-max-props-per-line": ["error", { "maximum": 1 }],
     "no-unused-expressions": "error",
     "react/jsx-no-target-blank": "off",
     "indent": ["error", 2],
