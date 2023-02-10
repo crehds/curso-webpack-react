@@ -1,20 +1,20 @@
 import { useState } from 'react';
 import { Form } from '../Home/components/Form';
 import { Header } from '../Home/components/Header';
-import { Modal } from './components/Modal';
-import { ErrorModal } from './components/Modal/components/ErrorModal';
-import { LoadingModal } from './components/Modal/components/LoadingModal';
-import { SuccessModal } from './components/Modal/components/SuccessModal';
+import { ContactModal } from './components/ContactModal';
+import { StateModal } from './container/StateModal';
+
 
 import './styles.css';
 
 function Contact() {
   const [isOpen, setIsOpen] = useState(false);
-  const [modalState, setModalState] = useState({
-    loading: true,
-    success: false,
-    error: false
-  });
+  const [modalState, setModalState] = useState("loading");
+
+  const handleIsOpen = () => {
+    setIsOpen(!isOpen);
+    setModalState("loading");
+  }
 
   async function handleEmail() {
     try {
@@ -25,40 +25,44 @@ function Contact() {
         'template_nqy8aeh',
         '#contact-form'
       )
-      setModalState((prevState) => ({
-        ...prevState,
-        loading: false,
-        success: true
-      }))
+      setModalState("success")
       formContact.reset();
     } catch (error) {
-      setModalState((prevState) => ({
-        ...prevState,
-        loading: false,
-        error: true
-      }));
+      setModalState("error");
       console.log(error);
     }
   }
 
   return (
     <div className='Contact'>
-      <Header />
+      <Header test="carlos" />
       <Form
         handleEmail={handleEmail}
         setIsOpen={setIsOpen}
       />
       {isOpen && (
-        <Modal
-          modalState={{ ...modalState }}
-          onLoading={() => <LoadingModal />}
+        <StateModal
+          modalState={modalState}
+          onLoading={() => (
+            <ContactModal
+              state="loading" />
+          )}
           onSuccess={() => (
-            <SuccessModal setStateModal={setModalState} setIsOpen={setIsOpen} />
-          )}
+            <ContactModal
+              state="success"
+              handleIsOpen={handleIsOpen}
+              iconModal="icon-check-circle"
+              titleModal="Mensaje enviado" />
+          ) }
           onError={() => (
-            <ErrorModal setStateModal={setModalState} setIsOpen={setIsOpen} />
-          )}
-        />
+            <ContactModal
+              state="error"
+              handleIsOpen={handleIsOpen}
+              iconModal="icon-x-altx-alt"
+              titleModal="Ocurrió un error" />
+          ) }
+        >
+        </StateModal>
       )}
     </div>
   );
