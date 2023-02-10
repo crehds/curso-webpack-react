@@ -10,9 +10,13 @@ export function useGetData(loadingApp) {
     async function getData() {
       try {
         const response = await fetch(APIGITHUB);
-        const { name, avatar_url, email, location } = await response.json();
+        const {
+          name, avatar_url, email, location
+        } = await response.json();
 
-        setUser({ name, avatar_url, email, location });
+        setUser({
+          name, avatar_url, email, location
+        });
         setLoading(false);
       } catch (error) {
         setLoading(null);
