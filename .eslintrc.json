@@ -26,6 +26,16 @@
   "plugins": ["react"],
   "rules": {
     "react/prop-types": "off",
+    "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }],
+    "react/jsx-first-prop-new-line": ["error", "multiline-multiprop"],
+    "react/jsx-wrap-multilines": [
+      "error",
+      {
+        "return": "parens-new-line",
+        "arrow": "parens-new-line",
+        "declaration": "parens-new-line"
+      }
+    ],
     "no-unused-expressions": "error",
     "react/jsx-no-target-blank": "off",
     "indent": ["error", 2],
