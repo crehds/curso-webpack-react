@@ -22,7 +22,9 @@ export function Portfolio(props) {
           setActiveOptionNavBar={setOption}
         />
         {loading && props.onLoading()}
-        <Content page={page} user={user}/>
+        <Content
+          page={page}
+          user={user} />
       </section>
     </Suspense>
   );

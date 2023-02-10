@@ -1,5 +1,3 @@
-
-
 import { UserData } from './components/UserData';
 import { SocialMedia } from './components/SocialMedia';
 import { Card } from '../../components/Card';

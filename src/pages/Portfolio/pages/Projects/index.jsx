@@ -24,7 +24,9 @@ function Portfolio() {
       </div>
       <div className='projects--container'>
         <div className='project--container'>
-          <a href='https://pysa.vercel.app' target='_blank'>
+          <a
+            href='https://pysa.vercel.app'
+            target='_blank'>
             <p>PYSA GAMING</p>
           </a>
           <a
@@ -32,11 +34,15 @@ function Portfolio() {
             href='https://pysa.vercel.app'
             target='_blank'
           >
-            <img src={pysa} alt='' />
+            <img
+              src={pysa}
+              alt='' />
           </a>
         </div>
         <div className='project--container'>
-          <a href='https://hagaloverde.vercel.app/' target='_blank'>
+          <a
+            href='https://hagaloverde.vercel.app/'
+            target='_blank'>
             <p>HAGALO VERDE</p>
           </a>
           <a
@@ -44,11 +50,15 @@ function Portfolio() {
             href='https://hagaloverde.vercel.app/'
             target='_blank'
           >
-            <img src={hagaloVerde} alt='' />
+            <img
+              src={hagaloVerde}
+              alt='' />
           </a>
         </div>
         <div className='project--container'>
-          <a href='https://expresion-latina.vercel.app/' target='_blank'>
+          <a
+            href='https://expresion-latina.vercel.app/'
+            target='_blank'>
             <p>EXPRESION LATINA</p>
           </a>
           <a
@@ -56,11 +66,15 @@ function Portfolio() {
             href='https://expresion-latina.vercel.app/'
             target='_blank'
           >
-            <img src={eyl} alt='' />
+            <img
+              src={eyl}
+              alt='' />
           </a>
         </div>
         <div className='project--container'>
-          <a href='https://marielis.vercel.app/' target='_blank'>
+          <a
+            href='https://marielis.vercel.app/'
+            target='_blank'>
             <p>MARIELIS PASTELERIA</p>
           </a>
           <a
@@ -68,11 +82,15 @@ function Portfolio() {
             href='https://marielis.vercel.app/'
             target='_blank'
           >
-            <img src={marielis} alt='' />
+            <img
+              src={marielis}
+              alt='' />
           </a>
         </div>
         <div className='project--container'>
-          <a href='https://crehds.github.io/bachatealo' target='_blank'>
+          <a
+            href='https://crehds.github.io/bachatealo'
+            target='_blank'>
             <p>BACHATEALO</p>
           </a>
           <a
@@ -80,11 +98,15 @@ function Portfolio() {
             href='https://crehds.github.io/bachatealo'
             target='_blank'
           >
-            <img src={bachatealo} alt='' />
+            <img
+              src={bachatealo}
+              alt='' />
           </a>
         </div>
         <div className='project--container'>
-          <a href='https://game-with-keyboard.vercel.app/' target='_blank'>
+          <a
+            href='https://game-with-keyboard.vercel.app/'
+            target='_blank'>
             <p>JUEGO CON TECLADO</p>
           </a>
           <a
@@ -92,7 +114,9 @@ function Portfolio() {
             href='https://game-with-keyboard.vercel.app/'
             target='_blank'
           >
-            <img src={juego} alt='' />
+            <img
+              src={juego}
+              alt='' />
           </a>
         </div>
       </div>

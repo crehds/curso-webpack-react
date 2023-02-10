@@ -8,7 +8,8 @@ export function Header() {
         <p>
             Escríbeme a mi
           <a
-            href='https://wa.me/51960265942' target='_blank'>
+            href='https://wa.me/51960265942'
+            target='_blank'>
             <i className='icon-whatsapp'></i>
           </a>
             o envíame un

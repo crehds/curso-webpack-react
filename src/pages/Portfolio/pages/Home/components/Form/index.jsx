@@ -5,10 +5,16 @@ export const Form = ({ handleEmail, setIsOpen }) => {
     handleEmail();
   }
   return (
-    <form action='' onSubmit={onSubmit} id='contact-form'>
+    <form
+      action=''
+      onSubmit={onSubmit}
+      id='contact-form'>
       <div>
         <label htmlFor=''>Nombre</label>
-        <input type='text' placeholder='Nombre' name='from_name' />
+        <input
+          type='text'
+          placeholder='Nombre'
+          name='from_name' />
       </div>
 
       <div>
@@ -22,7 +28,10 @@ export const Form = ({ handleEmail, setIsOpen }) => {
 
       <div>
         <label htmlFor=''>Teléfono</label>
-        <input type='tel' placeholder='Número telefónico' name='from_phone' />
+        <input
+          type='tel'
+          placeholder='Número telefónico'
+          name='from_phone' />
       </div>
 
       <div>
