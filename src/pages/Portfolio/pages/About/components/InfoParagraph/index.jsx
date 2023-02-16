@@ -4,8 +4,8 @@ export function InfoParagraph() {
   return (
     <div className='InfoParagraph'>
       <p>
-        Empecé en el aprendizaje web hace 7 años. Sin embargo, cuento con 3 años como desarrollador full-stack
-        independiente. Siendo React, Node y Ruby on Rails mis tecnologías favoritas.
+        Cuento con 3 años como desarrollador web full-stack. Siendo <strong>React, Redux, Webpack, PostCSS y TailwindCSS</strong>, mis tecnologías favoritas del lado del front-end.
+        Añadido a ello o de manera independiente, uso <strong>NodeJS y Ruby on Rails</strong> como tecnologías principales de desarrollo back-end.
       </p>
       <div>
         <i className='icon-react'></i>
