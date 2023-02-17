@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 
-export function useGetWidth() {
-  const initialWidth = document.getElementById('app').offsetWidth;
+export function useGetWidth({ id = '' }) {
+  const initialWidth = document.getElementById(id).offsetWidth;
   const [width, setWidth] = useState(initialWidth);
 
   function onResize() {
-    const newWidth = document.getElementById('app').offsetWidth;
+    const newWidth = document.getElementById(id).offsetWidth;
     setWidth(newWidth);
   }
 
