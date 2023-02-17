@@ -36,13 +36,19 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: $base-color;
   color: $color;
-  margin: 0;
   font-family: $global-font;
   min-height: 100vh;
 }
+
 article,
 aside,
 details,
