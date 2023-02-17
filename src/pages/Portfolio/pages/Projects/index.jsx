@@ -10,9 +10,6 @@ import marielis from '../../../../assets/images/marielis_screenshot.png';
 function Projects() {
   return (
     <div className='Portfolio'>
-      <div className='portfolio--title'>
-        <h2>Proyectos</h2>
-      </div>
       <div className='projects--container'>
         <div className='project--container'>
           <a
