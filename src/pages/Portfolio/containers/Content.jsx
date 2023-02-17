@@ -11,7 +11,7 @@ export function handleContent({ page = '', user = {} }) {
     return <Home {...user} />;
   case 'about':
     return <About />;
-  case 'portfolio':
+  case 'projects':
     return <Projects />;
   case 'contact':
     return <Contact />;

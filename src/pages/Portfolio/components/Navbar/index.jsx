@@ -31,10 +31,10 @@ export function NavBar({
           About Me
         </a>
         <a
-          id='portfolio'
+          id='projects'
           className='option inactive'
           onClick={handleOption}>
-          Portfolio
+          Projects
         </a>
         <a
           id='contact'
