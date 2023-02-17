@@ -9,9 +9,9 @@ import marielis from '../../../../assets/images/marielis_screenshot.png';
 
 function Projects() {
   return (
-    <div className='Portfolio'>
-      <div className='projects--container'>
-        <div className='project--container'>
+    <div className='projects'>
+      <div className='projects-container'>
+        <div className='project-container'>
           <a
             href='https://pysa.vercel.app'
             target='_blank'>
@@ -27,7 +27,7 @@ function Projects() {
               alt='' />
           </a>
         </div>
-        <div className='project--container'>
+        <div className='project-container'>
           <a
             href='https://hagaloverde.vercel.app/'
             target='_blank'>
@@ -43,7 +43,7 @@ function Projects() {
               alt='' />
           </a>
         </div>
-        <div className='project--container'>
+        <div className='project-container'>
           <a
             href='https://expresion-latina.vercel.app/'
             target='_blank'>
@@ -59,7 +59,7 @@ function Projects() {
               alt='' />
           </a>
         </div>
-        <div className='project--container'>
+        <div className='project-container'>
           <a
             href='https://marielis.vercel.app/'
             target='_blank'>
@@ -75,7 +75,7 @@ function Projects() {
               alt='' />
           </a>
         </div>
-        <div className='project--container'>
+        <div className='project-container'>
           <a
             href='https://crehds.github.io/bachatealo'
             target='_blank'>
@@ -91,7 +91,7 @@ function Projects() {
               alt='' />
           </a>
         </div>
-        <div className='project--container'>
+        <div className='project-container'>
           <a
             href='https://game-with-keyboard.vercel.app/'
             target='_blank'>
