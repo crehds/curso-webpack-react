@@ -2,4 +2,6 @@
   display: grid;
   justify-items: center;
   padding: 2em 1em;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr;
 }
