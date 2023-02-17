@@ -1,21 +1,21 @@
 import './styles.css';
 
-function ProjectCard({ src = '', href = '' }) {
+function ProjectCard({
+  src = '', href = '', alt = 'project preview', title = ''
+}) {
   return (
     <div className='project-card'>
       <a
         href={href}
         target='_blank'>
-        <p>PYSA GAMING</p>
-      </a>
-      <a
-        className='project--image--container'
-        href={href}
-        target='_blank'
-      >
-        <img
-          src={src}
-          alt='' />
+        <p>{title}</p>
+        <div
+          className='project--image--container'
+        >
+          <img
+            src={src}
+            alt={alt} />
+        </div>
       </a>
     </div>
   )

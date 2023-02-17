@@ -14,22 +14,32 @@ function Projects() {
       <div className='projects-container'>
         <ProjectCard
           src={pysa}
-          href='https://pysa.vercel.app' />
+          href='https://pysa.vercel.app'
+          title='pysa gaming' />
         <ProjectCard
           src={hagaloVerde}
-          href='https://hagaloverde.vercel.app' />
+          href='https://hagaloverde.vercel.app'
+          title="hagalo verde" />
         <ProjectCard
           src={eyl}
-          href='https://expresion-latina.vercel.app' />
+          href='https://expresion-latina.vercel.app'
+          title="expresión latina"
+        />
         <ProjectCard
           src={juego}
-          href='https://game-with-keyboard.vercel.app' />
+          href='https://game-with-keyboard.vercel.app'
+          title='juego con teclado'
+        />
         <ProjectCard
           src={bachatealo}
-          href='https://crehds.github.io/bachatealo' />
+          href='https://crehds.github.io/bachatealo'
+          title='bachatealo'
+        />
         <ProjectCard
           src={marielis}
-          href='https://marielis.vercel.app' />
+          href='https://marielis.vercel.app'
+          title='marielis pasteleria'
+        />
       </div>
     </div>
   );
