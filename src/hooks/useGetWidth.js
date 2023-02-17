@@ -1,13 +1,14 @@
-import { useEffect, useState } from 'react';
+import {
+  useCallback, useEffect, useState
+} from 'react';
 
 export function useGetWidth({ id = '' }) {
   const initialWidth = document.getElementById(id).offsetWidth;
   const [width, setWidth] = useState(initialWidth);
-
-  function onResize() {
+  const onResize = useCallback(() => {
     const newWidth = document.getElementById(id).offsetWidth;
     setWidth(newWidth);
-  }
+  }, [id]);
 
   useEffect(() => {
     window.addEventListener('resize', onResize);
