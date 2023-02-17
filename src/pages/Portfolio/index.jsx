@@ -15,7 +15,7 @@ export function Portfolio(props) {
 
   return (
     <Suspense fallback={<Loader1 />}>
-      <section className='AppContent'>
+      <section className='portfolio'>
         <NavBar
           appContent={page}
           setAppContent={setPage}
