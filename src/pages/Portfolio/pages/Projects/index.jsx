@@ -6,17 +6,8 @@ import eyl from '../../../../assets/images/eyl_screenshot.png';
 import juego from '../../../../assets/images/juego_screenshot.png';
 import bachatealo from '../../../../assets/images/bachatealo_screenshot.png';
 import marielis from '../../../../assets/images/marielis_screenshot.png';
-import { useGetWidth } from '../../../../hooks/useGetWidth';
-import { useEffect } from 'react';
 
-function Portfolio() {
-  const width = useGetWidth();
-
-  useEffect(() => {
-    const portfolio = document.querySelector('.Portfolio');
-    portfolio.style.width = `${width}px`;
-  }, [width]);
-
+function Projects() {
   return (
     <div className='Portfolio'>
       <div className='portfolio--title'>
@@ -124,4 +115,4 @@ function Portfolio() {
   );
 }
 
-export default Portfolio;
+export default Projects;

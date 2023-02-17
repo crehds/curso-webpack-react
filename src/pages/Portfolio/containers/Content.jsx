@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = React.lazy(() => import('../pages/Home'));
 const About = React.lazy(() => import('../pages/About'));
-const Portfolio = React.lazy(() => import('../pages/Projects'));
+const Projects = React.lazy(() => import('../pages/Projects'));
 const Contact = React.lazy(() => import('../pages/Contact'));
 
 export function handleContent({ page = '', user = {} }) {
@@ -11,8 +11,8 @@ export function handleContent({ page = '', user = {} }) {
     return <Home {...user} />;
   case 'about':
     return <About />;
-  case 'portfolio':
-    return <Portfolio />;
+  case 'projects':
+    return <Projects />;
   case 'contact':
     return <Contact />;
   default:

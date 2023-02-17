@@ -8,6 +8,8 @@
   text-align: center;
   z-index: 5;
   margin: 10px;
+  width: 100%;
+  max-width: 1024px;
   &::after {
     content: '';
     display: block;

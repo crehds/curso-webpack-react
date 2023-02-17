@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 
 export function useGetWidth() {
-  const initialWidth = document.getElementById('app').offsetWidth - 30;
+  const initialWidth = document.getElementById('app').offsetWidth;
   const [width, setWidth] = useState(initialWidth);
 
   function onResize() {
-    const newWidth = document.getElementById('app').offsetWidth - 30;
+    const newWidth = document.getElementById('app').offsetWidth;
     setWidth(newWidth);
   }
 
@@ -14,7 +14,7 @@ export function useGetWidth() {
     return () => {
       return window.removeEventListener('resize', onResize);
     };
-  }, [width]);
+  }, []);
 
   return width;
 }

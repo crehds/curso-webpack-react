@@ -6,6 +6,8 @@
   padding: 0 1em;
   grid-template-rows: 5em auto 1fr;
   overflow-y: auto;
+  width: 100%;
+  max-width: 1024px;
   @media (min-width: 700px) {
     margin: 0 6%;
   }
