@@ -9,7 +9,7 @@ import marielis from '../../../../assets/images/marielis_screenshot.png';
 import { useGetWidth } from '../../../../hooks/useGetWidth';
 import { useEffect } from 'react';
 
-function Portfolio() {
+function Projects() {
   const width = useGetWidth();
 
   useEffect(() => {
@@ -124,4 +124,4 @@ function Portfolio() {
   );
 }
 
-export default Portfolio;
+export default Projects;
