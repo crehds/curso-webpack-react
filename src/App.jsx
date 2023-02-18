@@ -4,7 +4,7 @@ import { Loader1 } from "./loaders/loader1";
 import { Portfolio } from "./pages/Portfolio";
 
 const App = () => {
-  const width = useGetWidth();
+  const width = useGetWidth({ id: 'app' });
 
   useEffect(() => {
     const app = document.querySelector('.app');

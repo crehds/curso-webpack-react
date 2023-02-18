@@ -5,6 +5,8 @@ const About = React.lazy(() => import('../pages/About'));
 const Projects = React.lazy(() => import('../pages/Projects'));
 const Contact = React.lazy(() => import('../pages/Contact'));
 
+import './styles.css';
+
 export function handleContent({ page = '', user = {} }) {
   switch (page) {
   case 'home':
@@ -22,5 +24,9 @@ export function handleContent({ page = '', user = {} }) {
 
 export function Content(props) {
   const { page, user } = props;
-  return handleContent({ page, user });
+  return (
+    <div className='content'>
+      {handleContent({ page, user })}
+    </div>
+  );
 }
