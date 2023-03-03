@@ -21,7 +21,7 @@ export function NavBar({
       return optionId;
     });
   };
-
+  console.log(i18n);
   return (
     <nav className='navbar--container'>
       <ul className='options--wrapped'>
@@ -49,11 +49,15 @@ export function NavBar({
           onClick={handleOption}>
           Contact
         </a>
-        <div>
-          <button onClick={() => handleLanguage('en')}>EN</button>
-          <button onClick={() => handleLanguage('es')}>ES</button>
-        </div>
       </ul>
+      <div className='navbar-language'>
+        <button
+          className={i18n.language === 'en' ? 'active' : ''}
+          onClick={() => handleLanguage('en')}>EN</button>
+        <button
+          className={i18n.language === 'es' ? 'active' : ''}
+          onClick={() => handleLanguage('es')}>ES</button>
+      </div>
     </nav>
   );
 }
