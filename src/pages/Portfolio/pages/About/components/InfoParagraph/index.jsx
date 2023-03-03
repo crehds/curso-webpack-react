@@ -1,11 +1,12 @@
+import { useTranslation } from 'react-i18next';
 import './styles.css';
 
 export function InfoParagraph() {
+  const { t }= useTranslation();
   return (
     <div className='InfoParagraph'>
       <p>
-        Cuento con 3 años como desarrollador web full-stack. Siendo <strong>React, Redux, Webpack, PostCSS y TailwindCSS</strong>, mis tecnologías favoritas del lado del front-end.
-        Añadido a ello o de manera independiente, uso <strong>NodeJS y Ruby on Rails</strong> como tecnologías principales de desarrollo back-end.
+        {t('portfolio.pages.about.info-paragraph')}
       </p>
       <div>
         <i className='icon-react'></i>

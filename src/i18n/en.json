@@ -6,6 +6,13 @@
       "projects": "Projects",
       "contact": "Contact"
     },
+    "portfolio": {
+      "pages": {
+        "about": {
+          "info-paragraph": "I have 3 years of experience as a full-stack web developer. On the front-end my favorites technologies are React, Redux, Webpack, PostCSS and TailwindCSS. Added to that or individually, I work with NodeJs or Ruby on Rails as main development tools to work on the back-end."
+        }
+      }
+    },
     "main-role": "FULL-STACK WEB DEVELOPER"
   }
 }
