@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Form } from '../Home/components/Form';
-import { Header } from '../Home/components/Header';
+import { Form } from './components/Form';
+import { Header } from './components/Header';
 import { ContactModal } from './components/ContactModal';
 import { StateModal } from './container/StateModal';
 
