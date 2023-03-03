@@ -7,19 +7,15 @@ const Contact = React.lazy(() => import('../pages/Contact'));
 
 import './styles.css';
 
+const pages = {
+  home: ({ user }) => <Home {...user} />,
+  about: () => <About />,
+  projects: () => <Projects />,
+  contact: () => <Contact />
+}
+
 export function handleContent({ page = '', user = {} }) {
-  switch (page) {
-  case 'home':
-    return <Home {...user} />;
-  case 'about':
-    return <About />;
-  case 'projects':
-    return <Projects />;
-  case 'contact':
-    return <Contact />;
-  default:
-    break;
-  }
+  return pages[page]({ user });
 }
 
 export function Content(props) {
