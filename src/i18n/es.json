@@ -1,1 +1,11 @@
-{ "translation": { "main-role": "DESARROLLADOR WEB FULL-STACK" } }
+{
+  "translation": {
+    "navbar": {
+      "home": "Inicio",
+      "about": "Acerca de mí",
+      "projects": "Proyectos",
+      "contact": "Contáctame"
+    },
+    "main-role": "DESARROLLADOR WEB FULL-STACK"
+  }
+}

@@ -4,7 +4,7 @@ import './styles.css';
 export function NavBar({
   appContent, setAppContent, setActiveOptionNavBar
 }) {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const handleLanguage = (lang) => {
     i18n.changeLanguage(lang);
@@ -21,7 +21,7 @@ export function NavBar({
       return optionId;
     });
   };
-  console.log(i18n);
+
   return (
     <nav className='navbar--container'>
       <ul className='options--wrapped'>
@@ -29,25 +29,25 @@ export function NavBar({
           id='home'
           className='option inactive'
           onClick={handleOption}>
-          Home
+          {t('navbar.home')}
         </a>
         <a
           id='about'
           className='option inactive'
           onClick={handleOption}>
-          About Me
+          {t('navbar.about')}
         </a>
         <a
           id='projects'
           className='option inactive'
           onClick={handleOption}>
-          Projects
+          {t('navbar.projects')}
         </a>
         <a
           id='contact'
           className='option inactive'
           onClick={handleOption}>
-          Contact
+          {t('navbar.contact')}
         </a>
       </ul>
       <div className='navbar-language'>
