@@ -1,8 +1,15 @@
+import { useTranslation } from 'react-i18next';
 import './styles.css';
 
 export function NavBar({
   appContent, setAppContent, setActiveOptionNavBar
 }) {
+  const { i18n } = useTranslation();
+
+  const handleLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  }
+
   const handleOption = (event) => {
     const optionId = event.target.id;
     if (appContent === optionId) return null;
@@ -42,6 +49,10 @@ export function NavBar({
           onClick={handleOption}>
           Contact
         </a>
+        <div>
+          <button onClick={() => handleLanguage('en')}>EN</button>
+          <button onClick={() => handleLanguage('es')}>ES</button>
+        </div>
       </ul>
     </nav>
   );
