@@ -1,8 +1,10 @@
 import i18next from "i18next";
 import { initReactI18next } from "react-i18next";
+import en from './en.json'
+import es from './es.json'
 
-const resources = { en: { translation: { "main-role": "FULL-STACK WEB DEVELOPER" } },
-  es: { translation: { "main-role": "DESARROLLADOR WEB FULL-STACK" } } }
+
+const resources = { en, es }
 
 const location = navigator.language
 
