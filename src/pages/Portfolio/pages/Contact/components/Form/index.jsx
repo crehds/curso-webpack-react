@@ -1,4 +1,8 @@
+import { useTranslation } from "react-i18next";
+
 export const Form = ({ handleEmail, setIsOpen }) => {
+  const { t } = useTranslation();
+
   function onSubmit(e) {
     e.preventDefault();
     setIsOpen(true);
@@ -10,42 +14,42 @@ export const Form = ({ handleEmail, setIsOpen }) => {
       onSubmit={onSubmit}
       id='contact-form'>
       <div>
-        <label htmlFor=''>Nombre</label>
+        <label htmlFor=''>{t('portfolio.pages.contact.form.name.label')}</label>
         <input
           type='text'
-          placeholder='Nombre'
+          placeholder={t('portfolio.pages.contact.form.name.placeholder')}
           name='from_name' />
       </div>
 
       <div>
-        <label htmlFor=''>E-mail</label>
+        <label htmlFor=''>{t('portfolio.pages.contact.form.e-mail.label')}</label>
         <input
           type='email'
-          placeholder='Correo electrónico'
+          placeholder={t('portfolio.pages.contact.form.e-mail.placeholder')}
           name='from_email'
         />
       </div>
 
       <div>
-        <label htmlFor=''>Teléfono</label>
+        <label htmlFor=''>{t('portfolio.pages.contact.form.phone.label')}</label>
         <input
           type='tel'
-          placeholder='Número telefónico'
+          placeholder={t('portfolio.pages.contact.form.phone.placeholder')}
           name='from_phone' />
       </div>
 
       <div>
-        <label htmlFor=''>Mensaje</label>
+        <label htmlFor=''>{t('portfolio.pages.contact.form.message.label')}</label>
         <textarea
           name='message'
           id=''
           cols='30'
           rows='8'
-          placeholder='Déjame un mensaje...'
+          placeholder={t('portfolio.pages.contact.form.message.placeholder')}
         ></textarea>
       </div>
       <div>
-        <button type='submit'>Enviar</button>
+        <button type='submit'>{t('portfolio.pages.contact.form.button')}</button>
       </div>
     </form>
   )
