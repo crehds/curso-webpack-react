@@ -1,9 +1,11 @@
 import { useTranslation } from 'react-i18next';
+import { useTheme } from '../../context/theme';
 import './styles.css';
 
 export function NavBar({
   appContent, setAppContent, setActiveOptionNavBar
 }) {
+  const { changeTheme } = useTheme();
   const { t, i18n } = useTranslation();
 
   const handleLanguage = (lang) => {
@@ -49,6 +51,14 @@ export function NavBar({
           onClick={handleOption}>
           {t('navbar.contact')}
         </a>
+        <div>
+          <button onClick={() => changeTheme('dark')}>
+            Dark
+          </button>
+          <button onClick={() => changeTheme('light')}>
+            Light
+          </button>
+        </div>
       </ul>
       <div className='navbar-language'>
         <button

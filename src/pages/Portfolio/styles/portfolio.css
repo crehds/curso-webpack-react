@@ -4,4 +4,16 @@
   padding: 2em 1em;
   min-height: 100vh;
   grid-template-rows: auto 1fr;
+
+  font-family: 'Ubuntu';
+  &.dark {
+    --blue: #161a17;
+    color: rgba(112, 212, 231, 0.75);
+    background-color: var(--blue);
+  }
+  &.light {
+    --blue: rgb(220, 220, 220, 0.7);
+    color: rgba(black, 0.38);
+    background-color: var(--blue);
+  }
 }

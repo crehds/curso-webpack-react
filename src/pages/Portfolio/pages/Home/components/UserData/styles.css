@@ -10,8 +10,9 @@
 }
 
 .userdata--profession {
-  color: rgba(20, 30, 120, 0.85);
+  color: rgba(18, 22, 60, 0.85);
   font-weight: bold;
+  letter-spacing: 0.8px;
   font-size: 18px;
   margin: 2px;
 }
