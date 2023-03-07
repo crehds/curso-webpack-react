@@ -1,5 +1,5 @@
 .project-card {
-  box-shadow: 0 -4px 5px 1px rgba(205, 205, 205, 0.85);
+  box-shadow: 0 -4px 5px 1px var(--gray);
   padding-top: 5px;
   border-radius: 5px;
   & a {
@@ -8,7 +8,7 @@
     width: 100%;
     text-align: center;
     text-decoration: none;
-    color: gray;
+    color: var(--font-secondary);
     & p {
       margin: 5px 0;
       text-transform: uppercase;

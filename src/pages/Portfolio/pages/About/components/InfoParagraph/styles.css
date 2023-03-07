@@ -1,5 +1,5 @@
 .InfoParagraph {
-  color: rgba(18, 22, 60, 0.85);
+  color: var(--font-secondary);
   padding: 5px 15px;
   & p {
     text-align: justify;
