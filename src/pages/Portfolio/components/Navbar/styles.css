@@ -51,7 +51,12 @@
   right: 0;
   top: 35%;
   display: flex;
+  align-items: center;
   gap: 8px;
+  & .navbar-theme {
+    cursor: pointer;
+    font-size: 20px;
+  }
   & button {
     padding: 2px;
     background-color: transparent;
