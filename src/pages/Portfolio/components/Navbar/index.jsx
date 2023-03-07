@@ -1,10 +1,19 @@
 import { useTranslation } from 'react-i18next';
+import { useTheme } from '../../context/theme';
+import { MdDarkMode } from 'react-icons/md';
+import { MdOutlineWbSunny } from 'react-icons/md';
 import './styles.css';
 
 export function NavBar({
   appContent, setAppContent, setActiveOptionNavBar
 }) {
+  const { theme, changeTheme } = useTheme();
   const { t, i18n } = useTranslation();
+
+  const handleTheme = () => {
+    const newTheme = theme ==='dark' ? 'light' : 'dark'
+    return changeTheme(newTheme)
+  }
 
   const handleLanguage = (lang) => {
     i18n.changeLanguage(lang);
@@ -51,6 +60,12 @@ export function NavBar({
         </a>
       </ul>
       <div className='navbar-language'>
+        {theme === 'dark' ? <MdDarkMode
+          onClick={handleTheme}
+          className="navbar-theme"
+          color='gray' /> : <MdOutlineWbSunny
+          onClick={handleTheme}
+          className="navbar-theme" />}
         <button
           className={i18n.language === 'en' ? 'active' : ''}
           onClick={() => handleLanguage('en')}>EN</button>

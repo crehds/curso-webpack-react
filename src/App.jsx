@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useGetWidth } from "./hooks/useGetWidth";
 import { Loader1 } from "./loaders/loader1";
 import { Portfolio } from "./pages/Portfolio";
+import { ThemeProvider } from "./pages/Portfolio/context/theme";
 
 const App = () => {
   const width = useGetWidth({ id: 'app' });
@@ -12,9 +13,11 @@ const App = () => {
   }, [width]);
 
   return (
-    <div className="app">
-      <Portfolio onLoading={() => <Loader1 />} />
-    </div>
+    <ThemeProvider>
+      <div className="app">
+        <Portfolio onLoading={() => <Loader1 />} />
+      </div>
+    </ThemeProvider>
   );
 };
 

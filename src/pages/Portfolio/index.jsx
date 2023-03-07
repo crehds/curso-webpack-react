@@ -6,16 +6,17 @@ import { NavBar } from './components/Navbar';
 
 import './styles/portfolio.css';
 import { Content } from './containers/Content';
+import { useTheme } from './context/theme';
 
 export function Portfolio(props) {
   const [page, setPage] = useState('home');
   const setOption = useActiveOptionNavBar(page);
-
   const [user, loading] = useGetData(true);
+  const { theme } = useTheme();
 
   return (
     <Suspense fallback={<Loader1 />}>
-      <section className='portfolio'>
+      <section className={`portfolio ${theme}`}>
         <NavBar
           appContent={page}
           setAppContent={setPage}

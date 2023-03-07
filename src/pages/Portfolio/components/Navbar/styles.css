@@ -17,7 +17,7 @@
       &.option {
         padding-bottom: 4px;
         &.active {
-          font-weight: bold;
+          font-weight: 500;
         }
       }
     }
@@ -51,25 +51,31 @@
   right: 0;
   top: 35%;
   display: flex;
+  align-items: center;
   gap: 8px;
+  & .navbar-theme {
+    cursor: pointer;
+    font-size: 20px;
+  }
   & button {
-    padding: 1px;
-    /* Todo: improve this DRY */
+    padding: 2px;
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px transparent solid;
+    &:hover,
     &.active {
-      background: rgba(220, 220, 220, 0.85);
-      border: 1px solid rgba(68, 70, 90, 0.85);
       padding: 2px;
-      border-radius: 3px;
-      color: rgba(20, 30, 120, 0.85);
       font-weight: bold;
     }
     &:hover {
-      background: rgba(220, 220, 220, 0.85);
-      border: 1px solid rgba(68, 70, 90, 0.85);
-      padding: 2px;
-      border-radius: 3px;
-      color: rgba(175, 103, 70, 0.9);
-      font-weight: bold;
+      background-color: rgba(68, 70, 90, 0.85);
+      border-color: rgba(68, 70, 90, 0.85);
+      color: rgba(220, 220, 220, 0.85);
+    }
+    &.active {
+      background-color: rgba(220, 220, 220, 0.85);
+      border-color: rgba(68, 70, 90, 0.85);
+      color: rgba(20, 30, 120, 0.85);
     }
   }
 }
