@@ -1,8 +1,15 @@
+import { useTranslation } from 'react-i18next';
 import './styles.css';
 
 export function NavBar({
   appContent, setAppContent, setActiveOptionNavBar
 }) {
+  const { t, i18n } = useTranslation();
+
+  const handleLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  }
+
   const handleOption = (event) => {
     const optionId = event.target.id;
     if (appContent === optionId) return null;
@@ -22,27 +29,35 @@ export function NavBar({
           id='home'
           className='option inactive'
           onClick={handleOption}>
-          Home
+          {t('navbar.home')}
         </a>
         <a
           id='about'
           className='option inactive'
           onClick={handleOption}>
-          About Me
+          {t('navbar.about')}
         </a>
         <a
           id='projects'
           className='option inactive'
           onClick={handleOption}>
-          Projects
+          {t('navbar.projects')}
         </a>
         <a
           id='contact'
           className='option inactive'
           onClick={handleOption}>
-          Contact
+          {t('navbar.contact')}
         </a>
       </ul>
+      <div className='navbar-language'>
+        <button
+          className={i18n.language === 'en' ? 'active' : ''}
+          onClick={() => handleLanguage('en')}>EN</button>
+        <button
+          className={i18n.language === 'es' ? 'active' : ''}
+          onClick={() => handleLanguage('es')}>ES</button>
+      </div>
     </nav>
   );
 }

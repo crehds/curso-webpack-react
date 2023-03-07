@@ -2,6 +2,9 @@
   display: flex;
   justify-content: center;
   padding-top: 15px;
+  width: 100%;
+  max-width: 1024px;
+  position: relative;
   & .options--wrapped {
     list-style-type: none;
     display: flex;
@@ -41,4 +44,32 @@
 
 .inactive:hover::after {
   transform: scaleX(1);
+}
+
+.navbar-language {
+  position: absolute;
+  right: 0;
+  top: 35%;
+  display: flex;
+  gap: 8px;
+  & button {
+    padding: 1px;
+    /* Todo: improve this DRY */
+    &.active {
+      background: rgba(220, 220, 220, 0.85);
+      border: 1px solid rgba(68, 70, 90, 0.85);
+      padding: 2px;
+      border-radius: 3px;
+      color: rgba(20, 30, 120, 0.85);
+      font-weight: bold;
+    }
+    &:hover {
+      background: rgba(220, 220, 220, 0.85);
+      border: 1px solid rgba(68, 70, 90, 0.85);
+      padding: 2px;
+      border-radius: 3px;
+      color: rgba(175, 103, 70, 0.9);
+      font-weight: bold;
+    }
+  }
 }
