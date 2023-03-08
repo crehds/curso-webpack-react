@@ -26,14 +26,14 @@
     position: fixed;
     min-height: 100vh;
     top: 0;
-    right: -200px;
+    right: -40vw;
     padding-top: 2rem;
     z-index: 1000;
     width: 40vw;
     background-color: var(--blue);
     justify-content: flex-start;
     align-items: center;
-    transition: 0.5s;
+    transition: 0.4s;
     & .options--wrapped {
       flex-direction: column;
       text-align: center;
@@ -42,8 +42,7 @@
     &.navbar--is-active {
       right: 0;
       & > .navbar-hamburger {
-        position: absolute;
-        left: 0;
+        right: 33vw;
       }
     }
   }
@@ -74,12 +73,12 @@
 .navbar-language {
   position: absolute;
   right: 0;
-  top: 35%;
   display: flex;
   align-items: center;
   gap: 8px;
   @media (max-width: 800px) {
     top: 15px;
+    right: 4px;
   }
   & .navbar-theme {
     cursor: pointer;
@@ -112,11 +111,10 @@
   display: none;
   @media (max-width: 800px) {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 15px;
-    left: -50px;
-    width: 100%;
-    padding-left: 1rem;
-    transition: 0.3s;
+    right: 1rem;
+    z-index: 1005;
+    transition: 0.5s;
   }
 }

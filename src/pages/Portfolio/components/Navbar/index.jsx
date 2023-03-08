@@ -39,11 +39,10 @@ export function NavBar({
 
   return (
     <nav className='navbar'>
-      <div className="navbar-hamburger">
-        <MdMenu
-          size={24}
-          onClick={handleActiveNavbar} />
-      </div>
+      <MdMenu
+        size={24}
+        className="navbar-hamburger"
+        onClick={handleActiveNavbar} />
       <ul className='options--wrapped'>
         <a
           id='home'
