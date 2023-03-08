@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { useTheme } from '../../context/theme';
 import { MdDarkMode } from 'react-icons/md';
 import { MdOutlineWbSunny } from 'react-icons/md';
+import { MdMenu } from 'react-icons/md';
 import './styles.css';
 
 export function NavBar({
@@ -33,6 +34,9 @@ export function NavBar({
 
   return (
     <nav className='navbar--container'>
+      <div className="navbar-hamburger">
+        <MdMenu size={24} />
+      </div>
       <ul className='options--wrapped'>
         <a
           id='home'

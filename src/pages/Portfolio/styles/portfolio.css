@@ -30,4 +30,9 @@
     color: rgba(black, 0.38);
     background-color: var(--blue);
   }
+
+  @media (max-width: 800px) {
+    position: relative;
+    grid-template-rows: auto;
+  }
 }
