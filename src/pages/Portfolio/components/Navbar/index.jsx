@@ -32,10 +32,17 @@ export function NavBar({
     });
   };
 
+  const handleActiveNavbar = () => {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('navbar--is-active');
+  }
+
   return (
-    <nav className='navbar--container'>
+    <nav className='navbar'>
       <div className="navbar-hamburger">
-        <MdMenu size={24} />
+        <MdMenu
+          size={24}
+          onClick={handleActiveNavbar} />
       </div>
       <ul className='options--wrapped'>
         <a
