@@ -1,9 +1,11 @@
 import {
   useCallback, useEffect, useState
 } from 'react';
+// import { debounce } from 'lodash';
 
 export function useGetWidth({ id = '' }) {
-  const initialWidth = document.getElementById(id).offsetWidth;
+  const element = document.getElementById(id);
+  const initialWidth = element.offsetWidth;
   const [width, setWidth] = useState(initialWidth);
   const onResize = useCallback(() => {
     const newWidth = document.getElementById(id).offsetWidth;

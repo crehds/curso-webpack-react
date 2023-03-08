@@ -8,15 +8,13 @@ const App = () => {
   const width = useGetWidth({ id: 'app' });
 
   useEffect(() => {
-    const app = document.querySelector('.app');
-    app.style.width = `${width}px`;
+    const app = document.querySelector('.portfolio');
+    app.style.minWidth = `${width}px`;
   }, [width]);
 
   return (
     <ThemeProvider>
-      <div className="app">
-        <Portfolio onLoading={() => <Loader1 />} />
-      </div>
+      <Portfolio onLoading={() => <Loader1 />} />
     </ThemeProvider>
   );
 };
