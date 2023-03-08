@@ -1,7 +1,7 @@
 .Card {
   position: relative;
   padding: 20px 0;
-  background: rgba(220, 220, 220, 0.85);
+  background: var(--gray);
   border-radius: 3px;
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.5);
   overflow: hidden;
@@ -17,7 +17,7 @@
     height: 130px;
     top: 0;
     background: rgba(68, 70, 90, 0.85);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid var(--gray-2);
     z-index: -1;
   }
 }
