@@ -1,15 +1,15 @@
 .Contact {
-  margin: 0 3%;
   border: 2px solid var(--gray);
   display: grid;
   height: 80vh;
-  padding: 0 1em;
+  padding: 0 4rem;
   grid-template-rows: 5em auto 1fr;
   overflow-y: auto;
   width: 100%;
   border-radius: 14px;
   max-width: 1024px;
   background-color: var(--gray);
+  justify-content: center;
   & form {
     margin: 10px 5px;
     display: grid;
