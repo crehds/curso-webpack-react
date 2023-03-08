@@ -1,7 +1,6 @@
-.navbar--container {
+.navbar {
   display: flex;
   justify-content: center;
-  padding-top: 15px;
   width: 100%;
   max-width: 1024px;
   position: relative;
@@ -24,18 +23,28 @@
   }
   @media (max-width: 800px) {
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     min-height: 100vh;
-    right: 0;
+    top: 0;
+    right: -200px;
+    padding-top: 2rem;
     z-index: 1000;
     width: 40vw;
     background-color: var(--blue);
     justify-content: flex-start;
     align-items: center;
+    transition: 0.5s;
     & .options--wrapped {
       flex-direction: column;
       text-align: center;
       padding-top: 0.5rem;
+    }
+    &.navbar--is-active {
+      right: 0;
+      & > .navbar-hamburger {
+        position: absolute;
+        left: 0;
+      }
     }
   }
 }
@@ -101,9 +110,13 @@
 
 .navbar-hamburger {
   display: none;
-  width: 100%;
-  padding-left: 1rem;
   @media (max-width: 800px) {
     display: block;
+    position: absolute;
+    top: 15px;
+    left: -50px;
+    width: 100%;
+    padding-left: 1rem;
+    transition: 0.3s;
   }
 }
