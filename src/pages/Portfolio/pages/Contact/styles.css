@@ -1,19 +1,15 @@
 .Contact {
-  margin: 0 3%;
-  border: 1px solid silver;
+  border: 2px solid var(--gray);
   display: grid;
   height: 80vh;
-  padding: 0 1em;
+  padding: 0 4rem;
   grid-template-rows: 5em auto 1fr;
   overflow-y: auto;
   width: 100%;
+  border-radius: 14px;
   max-width: 1024px;
-  @media (min-width: 700px) {
-    margin: 0 6%;
-  }
-  @media (min-width: 1050px) {
-    margin: 0 10%;
-  }
+  background-color: var(--gray);
+  justify-content: center;
   & form {
     margin: 10px 5px;
     display: grid;
@@ -30,10 +26,22 @@
       }
       & label {
         text-align: left;
+        font-weight: 500;
+      }
+      & input,
+      textarea {
+        background-color: var(--gray-2);
+        border: 2px solid var(--gray-2);
+        border-radius: 3px;
+        padding: 4px;
+        outline: none;
       }
       & textarea {
         height: 100%;
       }
+    }
+    @media (max-width: 800px) {
+      font-size: 14px;
     }
     & div:nth-of-type(5) {
       display: flex;
@@ -41,8 +49,10 @@
       & button {
         padding: 6px;
         border-radius: 4px;
+        background-color: transparent;
+        border: 3px solid var(--gray-2);
         &:hover {
-          background-color: rgba(75, 75, 75, 0.5);
+          background-color: var(--gray-2);
         }
       }
     }
@@ -57,6 +67,9 @@
   & h2 {
     margin: 0;
     color: gray;
+    @media (max-width: 800px) {
+      font-size: 28px;
+    }
   }
 }
 
@@ -66,6 +79,9 @@
   display: flex;
   align-items: center;
   font-size: 18px;
+  @media (max-width: 800px) {
+    font-size: 14px;
+  }
   & p {
     width: 100%;
     & a {

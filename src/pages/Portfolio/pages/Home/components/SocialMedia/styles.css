@@ -9,7 +9,7 @@
     text-decoration: none;
     & i {
       font-size: 32px;
-      color: rgba(80, 80, 80, 0.5);
+      color: rgba(80, 80, 80, 0.7);
       &.twitter:hover {
         color: #1da1f2;
       }
