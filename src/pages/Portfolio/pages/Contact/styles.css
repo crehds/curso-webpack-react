@@ -12,34 +12,10 @@
   justify-content: center;
   & form {
     margin: 10px 5px;
-    display: grid;
-    grid-template-rows: auto auto auto 1fr auto;
-    grid-row-gap: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     width: 100%;
-    & div {
-      display: grid;
-      grid-template-columns: minmax(35px, 70px) 1fr;
-      grid-column-gap: 3px;
-      align-items: center;
-      &:nth-of-type(4) {
-        padding: 10px 0 5px;
-      }
-      & label {
-        text-align: left;
-        font-weight: 500;
-      }
-      & input,
-      textarea {
-        background-color: var(--gray-2);
-        border: 2px solid var(--gray-2);
-        border-radius: 3px;
-        padding: 4px;
-        outline: none;
-      }
-      & textarea {
-        height: 100%;
-      }
-    }
     @media (max-width: 800px) {
       font-size: 14px;
     }

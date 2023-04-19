@@ -1,9 +1,11 @@
+import './styles/label.css';
+
 export const Label = (props) => {
   const { name, children } = props;
   return (
-    <div>
+    <div className='form-label'>
       <label>
-        {name}
+        <p>{name}</p>
         {children}
       </label>
     </div>
