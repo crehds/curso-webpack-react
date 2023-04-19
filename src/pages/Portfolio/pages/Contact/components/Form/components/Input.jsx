@@ -2,14 +2,11 @@ import { Label } from "./Label";
 
 export const Input = (props) => {
   const {
-    type, name, label, translator
+    type, name, label, placeholder
   } = props;
 
-  const placeholder = translator(name, 'placeholder');
-  const labelName = translator(label, 'label');
-
   return (
-    <Label name={labelName} >
+    <Label name={label} >
       <input
         type={type}
         placeholder={placeholder}

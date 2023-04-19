@@ -2,14 +2,11 @@ import { Label } from "./Label";
 
 export const TextArea = (props) => {
   const {
-    name, label, translator
+    name, label, placeholder
   } = props;
 
-  const placeholder = translator(name, 'placeholder')
-  const labelName = translator(label, 'label')
-
   return (
-    <Label name={labelName}>
+    <Label name={label}>
       <textarea
         name={name}
         id=''

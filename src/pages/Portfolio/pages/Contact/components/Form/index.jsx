@@ -5,14 +5,18 @@ import { TextArea } from "./components/TextArea";
 export const Form = ({ handleEmail, setIsOpen }) => {
   const { t } = useTranslation();
 
+  function transtaleLabel(string) {
+    return t(`portfolio.pages.contact.form.${string}.label`)
+  }
+
+  function translatePlaceholder(string) {
+    return t(`portfolio.pages.contact.form.${string}.placeholder`)
+  }
+
   function onSubmit(e) {
     e.preventDefault();
     setIsOpen(true);
     handleEmail();
-  }
-
-  function translator(string, property) {
-    return t(`portfolio.pages.contact.form.${string}.${property}`)
   }
 
   return (
@@ -21,27 +25,27 @@ export const Form = ({ handleEmail, setIsOpen }) => {
       onSubmit={onSubmit}
       id='contact-form'>
       <Input
-        label='name'
+        label={transtaleLabel('name')}
         name='name'
         type='text'
-        translator={translator}
+        placeholder={translatePlaceholder('name')}
       />
       <Input
-        label='e-mail'
+        label={transtaleLabel('e-mail')}
         name='e-mail'
         type='email'
-        translator={translator}
+        placeholder={translatePlaceholder('e-mail')}
       />
       <Input
-        label='phone'
+        label={transtaleLabel('phone')}
         name='phone'
         type='tel'
-        translator={translator}
+        placeholder={translatePlaceholder('phone')}
       />
       <TextArea
-        label='message'
+        label={transtaleLabel('message')}
         name='message'
-        translator={translator}
+        placeholder={translatePlaceholder('message')}
       />
       <div>
         <button type='submit'>{t('portfolio.pages.contact.form.button')}</button>
