@@ -1,4 +1,6 @@
 import { useTranslation } from "react-i18next";
+import { Input } from "./components/Input";
+import { TextArea } from "./components/TextArea";
 
 export const Form = ({ handleEmail, setIsOpen }) => {
   const { t } = useTranslation();
@@ -8,46 +10,39 @@ export const Form = ({ handleEmail, setIsOpen }) => {
     setIsOpen(true);
     handleEmail();
   }
+
+  function translator(string, property) {
+    return t(`portfolio.pages.contact.form.${string}.${property}`)
+  }
+
   return (
     <form
       action=''
       onSubmit={onSubmit}
       id='contact-form'>
-      <div>
-        <label htmlFor=''>{t('portfolio.pages.contact.form.name.label')}</label>
-        <input
-          type='text'
-          placeholder={t('portfolio.pages.contact.form.name.placeholder')}
-          name='from_name' />
-      </div>
-
-      <div>
-        <label htmlFor=''>{t('portfolio.pages.contact.form.e-mail.label')}</label>
-        <input
-          type='email'
-          placeholder={t('portfolio.pages.contact.form.e-mail.placeholder')}
-          name='from_email'
-        />
-      </div>
-
-      <div>
-        <label htmlFor=''>{t('portfolio.pages.contact.form.phone.label')}</label>
-        <input
-          type='tel'
-          placeholder={t('portfolio.pages.contact.form.phone.placeholder')}
-          name='from_phone' />
-      </div>
-
-      <div>
-        <label htmlFor=''>{t('portfolio.pages.contact.form.message.label')}</label>
-        <textarea
-          name='message'
-          id=''
-          cols='30'
-          rows='8'
-          placeholder={t('portfolio.pages.contact.form.message.placeholder')}
-        ></textarea>
-      </div>
+      <Input
+        label='name'
+        name='name'
+        type='text'
+        translator={translator}
+      />
+      <Input
+        label='e-mail'
+        name='e-mail'
+        type='email'
+        translator={translator}
+      />
+      <Input
+        label='phone'
+        name='phone'
+        type='tel'
+        translator={translator}
+      />
+      <TextArea
+        label='message'
+        name='message'
+        translator={translator}
+      />
       <div>
         <button type='submit'>{t('portfolio.pages.contact.form.button')}</button>
       </div>
