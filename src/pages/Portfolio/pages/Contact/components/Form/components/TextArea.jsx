@@ -14,7 +14,7 @@ export const TextArea = (props) => {
         name={name}
         id=''
         cols='30'
-        rows='8'
+        rows='15'
         placeholder={placeholder}
       />
     </Label>

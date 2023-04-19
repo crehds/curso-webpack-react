@@ -1,10 +1,13 @@
 .form-label {
+  display: flex;
+  align-items: center;
   flex-grow: 1;
   &:nth-of-type(4) {
     flex-grow: 3;
     padding: 10px 0 5px;
   }
   & label {
+    width: 100%;
     text-align: left;
     font-weight: 500;
     display: grid;
