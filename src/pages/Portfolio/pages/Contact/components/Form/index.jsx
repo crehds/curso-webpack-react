@@ -15,8 +15,10 @@ export const Form = ({ handleEmail, setIsOpen }) => {
 
   function onSubmit(e) {
     e.preventDefault();
+
+    const form = e.target;
     setIsOpen(true);
-    handleEmail();
+    handleEmail(form);
   }
 
   return (

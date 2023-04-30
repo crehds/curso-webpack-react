@@ -16,9 +16,14 @@ function Contact() {
     setModalState("loading");
   }
 
-  async function handleEmail() {
+  async function handleEmail(form) {
     try {
-      const formContact = document.querySelector('form');
+      const formData = new FormData(form)
+      const data = Object.fromEntries(formData.entries());
+      if (data.name === '' || data['e-mail'] === '' || data.message === '' || data.phone === '') {
+        throw new Error('Todos los campos son obligatorios');
+      }
+
       // eslint-disable-next-line no-undef
       await emailjs.sendForm(
         'service_xcf4f4j',
@@ -26,7 +31,7 @@ function Contact() {
         '#contact-form'
       )
       setModalState("success")
-      formContact.reset();
+      form.reset();
     } catch (error) {
       setModalState("error");
       console.log(error);
@@ -35,7 +40,7 @@ function Contact() {
 
   return (
     <div className='Contact'>
-      <Header test="carlos" />
+      <Header />
       <Form
         handleEmail={handleEmail}
         setIsOpen={setIsOpen}
@@ -45,21 +50,21 @@ function Contact() {
           modalState={modalState}
           onLoading={() => (
             <ContactModal
-              state="loading" />
+              state='loading' />
           )}
           onSuccess={() => (
             <ContactModal
-              state="success"
+              state='success'
               handleIsOpen={handleIsOpen}
-              iconModal="icon-check-circle"
-              titleModal="Mensaje enviado" />
+              iconModal='icon-check-circle'
+              titleModal='Mensaje enviado' />
           ) }
           onError={() => (
             <ContactModal
-              state="error"
+              state='error'
               handleIsOpen={handleIsOpen}
-              iconModal="icon-x-altx-alt"
-              titleModal="Ocurrió un error" />
+              iconModal='icon-x-altx-alt'
+              titleModal='Ocurrió un error' />
           ) }
         >
         </StateModal>
