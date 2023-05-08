@@ -17,6 +17,10 @@
             "wp": "Envíame un mensaje via",
             "gmail": "o escríbeme un correo"
           },
+          "modal": {
+            "title": "Ocurrió un error",
+            "button": "Aceptar"
+          },
           "form": {
             "name": {
               "label": "Nombre",

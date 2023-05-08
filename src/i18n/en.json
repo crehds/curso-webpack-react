@@ -17,6 +17,10 @@
             "wp": "Send me a message via",
             "gmail": "or write a e-mail"
           },
+          "modal": {
+            "title": "Something went wrong",
+            "button": "Ok"
+          },
           "form": {
             "name": {
               "label": "Name",

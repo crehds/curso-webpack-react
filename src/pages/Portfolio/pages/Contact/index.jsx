@@ -64,7 +64,7 @@ function Contact() {
               state='error'
               handleIsOpen={handleIsOpen}
               iconModal='icon-x-altx-alt'
-              titleModal='Ocurrió un error' />
+            />
           ) }
         >
         </StateModal>
