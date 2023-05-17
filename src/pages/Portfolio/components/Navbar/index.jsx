@@ -41,7 +41,7 @@ export function NavBar({
     <nav className='navbar'>
       <MdMenu
         size={24}
-        className="navbar-hamburger"
+        className='navbar-hamburger'
         onClick={handleActiveNavbar} />
       <ul className='options--wrapped'>
         <a
@@ -72,10 +72,10 @@ export function NavBar({
       <div className='navbar-language'>
         {theme === 'dark' ? <MdDarkMode
           onClick={handleTheme}
-          className="navbar-theme"
+          className='navbar-theme'
           color='gray' /> : <MdOutlineWbSunny
           onClick={handleTheme}
-          className="navbar-theme" />}
+          className='navbar-theme' />}
         <button
           className={i18n.language === 'en' ? 'active' : ''}
           onClick={() => handleLanguage('en')}>EN</button>
