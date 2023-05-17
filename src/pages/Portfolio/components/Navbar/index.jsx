@@ -5,9 +5,7 @@ import { MdOutlineWbSunny } from 'react-icons/md';
 import { MdMenu } from 'react-icons/md';
 import './styles.css';
 
-export function NavBar({
-  appContent, setAppContent, setActiveOptionNavBar
-}) {
+export function NavBar({ appContent, setAppContent }) {
   const { theme, changeTheme } = useTheme();
   const { t, i18n } = useTranslation();
 
@@ -23,13 +21,8 @@ export function NavBar({
   const handleOption = (event) => {
     const optionId = event.target.id;
     if (appContent === optionId) return null;
+
     setAppContent(optionId);
-    setActiveOptionNavBar((prevState) => {
-      const activeOption = document.getElementById(prevState);
-      activeOption.classList.remove('active');
-      activeOption.classList.add('inactive');
-      return optionId;
-    });
   };
 
   const handleActiveNavbar = () => {
@@ -46,25 +39,25 @@ export function NavBar({
       <ul className='options--wrapped'>
         <a
           id='home'
-          className='option inactive'
+          className={`option ${appContent === 'home' ? 'active' : 'inactive'}`}
           onClick={handleOption}>
           {t('navbar.home')}
         </a>
         <a
           id='about'
-          className='option inactive'
+          className={`option ${appContent === 'about' ? 'active' : 'inactive'}`}
           onClick={handleOption}>
           {t('navbar.about')}
         </a>
         <a
           id='projects'
-          className='option inactive'
+          className={`option ${appContent === 'projects' ? 'active' : 'inactive'}`}
           onClick={handleOption}>
           {t('navbar.projects')}
         </a>
         <a
           id='contact'
-          className='option inactive'
+          className={`option ${appContent === 'contact' ? 'active' : 'inactive'}`}
           onClick={handleOption}>
           {t('navbar.contact')}
         </a>
