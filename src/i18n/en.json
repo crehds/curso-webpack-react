@@ -9,13 +9,17 @@
     "portfolio": {
       "pages": {
         "about": {
-          "info-paragraph": "I have 3 years of experience as a full-stack web developer. On the front-end my favorites technologies are React, Redux, Webpack, PostCSS and TailwindCSS. Added to that or individually, I work with NodeJs or Ruby on Rails as main development tools to work on the back-end."
+          "info-paragraph": "I have 3 years and a half of experience as a full-stack web developer. On the front-end my favorites technologies are React, Redux, Webpack, PostCSS and TailwindCSS. Added to that or individually, I work with NodeJs or Ruby on Rails as main development tools to work on the back-end."
         },
         "contact": {
           "header": {
             "title": "Let's work together",
             "wp": "Send me a message via",
             "gmail": "or write a e-mail"
+          },
+          "modal": {
+            "title": "Something went wrong",
+            "button": "Ok"
           },
           "form": {
             "name": {
@@ -39,6 +43,6 @@
         }
       }
     },
-    "main-role": "FULL-STACK WEB DEVELOPER"
+    "main-role": "SSr. FULL-STACK WEB DEVELOPER"
   }
 }
