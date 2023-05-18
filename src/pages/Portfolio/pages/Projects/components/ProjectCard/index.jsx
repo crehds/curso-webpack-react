@@ -1,3 +1,4 @@
+import ProjectDetails from '../ProjectDetails';
 import './styles.css';
 
 function ProjectCard({
@@ -5,18 +6,20 @@ function ProjectCard({
 }) {
   return (
     <div className='project-card'>
-      <a
-        href={href}
-        target='_blank'>
-        <p>{title}</p>
+      <div
+        className='project-card--content'>
+        <p className='project-card--title'>{title}</p>
         <div
           className='project--image--container'
         >
           <img
             src={src}
             alt={alt} />
+          <ProjectDetails
+            web={href}
+            source='#' />
         </div>
-      </a>
+      </div>
     </div>
   )
 }
