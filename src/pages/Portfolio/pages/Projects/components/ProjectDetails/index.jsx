@@ -9,11 +9,13 @@ function ProjectDetails({ web, source }) {
       <div className='project-details--icons'>
         <a
           href={web}
+          target='_blank'
           className='project-details--icon'>
           <TfiWorld size={30} />
         </a>
         <a
           href={source}
+          target='_blank'
           className='project-details--icon'>
           <BsGithub size={30} />
         </a>

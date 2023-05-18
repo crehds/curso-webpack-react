@@ -2,7 +2,7 @@ import ProjectDetails from '../ProjectDetails';
 import './styles.css';
 
 function ProjectCard({
-  src = '', href = '', alt = 'project preview', title = ''
+  src = '', href = '', alt = 'project preview', title = '', source = '#'
 }) {
   return (
     <div className='project-card'>
@@ -17,7 +17,7 @@ function ProjectCard({
             alt={alt} />
           <ProjectDetails
             web={href}
-            source='#' />
+            source={source} />
         </div>
       </div>
     </div>
