@@ -15,30 +15,38 @@ function Projects() {
         <ProjectCard
           src={pysa}
           href='https://pysa.vercel.app'
-          title='pysa gaming' />
+          title='pysa gaming'
+          source='https://github.com/crehds/pysa'
+        />
         <ProjectCard
           src={hagaloVerde}
           href='https://hagaloverde.vercel.app'
-          title="hagalo verde" />
+          title='hagalo verde'
+          source='https://github.com/crehds/hagalo_verde'
+        />
         <ProjectCard
           src={eyl}
           href='https://expresion-latina.vercel.app'
-          title="expresión latina"
+          title='expresión latina'
+          source='https://github.com/crehds/expresion-latina'
         />
         <ProjectCard
           src={juego}
           href='https://game-with-keyboard.vercel.app'
           title='juego con teclado'
+          source='https://github.com/crehds/gameWithKeyboard'
         />
         <ProjectCard
           src={bachatealo}
           href='https://crehds.github.io/bachatealo'
           title='bachatealo'
+          source='https://github.com/crehds/bachatealo/tree/master/bachatealo'
         />
         <ProjectCard
           src={marielis}
           href='https://marielis.vercel.app'
           title='marielis pasteleria'
+          source='https://github.com/crehds/marielis'
         />
       </div>
     </div>
