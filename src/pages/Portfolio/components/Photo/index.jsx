@@ -1,9 +1,11 @@
 import './styles.css';
 
-export const Photo = ({ src = 'https://avatars.githubusercontent.com/u/42285802?v=4',
-  name }) => {
+export const Photo = ({
+  src = 'https://avatars.githubusercontent.com/u/42285802?v=4',
+  name, position = 'center'
+}) => {
   return (
-    <div className='Photo--container center circle'>
+    <div className={`Photo--container ${position} circle`}>
       <img
         src={src}
         alt={`imagen de ${name}`} />
