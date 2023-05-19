@@ -1,0 +1,7 @@
+.experience-metrics {
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  color: var(--font-secondary);
+  font-size: 14px;
+}

@@ -50,6 +50,12 @@ export function NavBar({ appContent, setAppContent }) {
           {t('navbar.about')}
         </a>
         <a
+          id='experience'
+          className={`option ${appContent === 'experience' ? 'active' : 'inactive'}`}
+          onClick={handleOption}>
+          {'Experience'}
+        </a>
+        <a
           id='projects'
           className={`option ${appContent === 'projects' ? 'active' : 'inactive'}`}
           onClick={handleOption}>
