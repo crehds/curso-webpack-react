@@ -12,41 +12,64 @@ function Experience() {
     <Card type='no-division'>
       <Photo position='right' />
       <div className='experience-metrics'>
-        <h2>Summary</h2>
-        <div className='experience-details'>
-          <ul>
-            <li>
+        <h2 className='experience-metrics--title'>Summary</h2>
+        <ul className='experience-metrics--details'>
+          <li className='experience-metric'>
+            <div className='experience-metric--description'>
               <BiGitPullRequest
                 size={20}
-                color='#000' />
-              <span> Pull Requests: 1,000</span>
-            </li>
-            <li>
+                color='var(--yellow)' />
+              <p> Pull Requests</p>
+            </div>
+            <div className='experience-metric--value'>
+              <p>1,000</p>
+            </div>
+          </li>
+          <li className='experience-metric'>
+            <div className='experience-metric--description'>
               <TbGitCommit
                 size={20}
-                color='#000' />
-              <span> Commits: 1,000</span>
-            </li>
-            <li>
+                color='var(--yellow)' />
+              <p> Commits</p>
+            </div>
+            <div className='experience-metric--value'>
+              <p>1,000</p>
+            </div>
+          </li>
+          <li className='experience-metric'>
+            <div className='experience-metric--description'>
               <SiCodereview
                 size={20}
-                color='#000' />
-              <span> Code Reviews: 1,000</span>
-            </li>
-            <li>
+                color='var(--yellow)' />
+              <p> Code Reviews </p>
+            </div>
+            <div className='experience-metric--value'>
+              <p>1,000</p>
+            </div>
+          </li>
+          <li className='experience-metric'>
+            <div className='experience-metric--description'>
               <GoIssueOpened
                 size={20}
-                color='#000' />
-              <span> Issues: 1,000</span>
-            </li>
-            <li>
+                color='var(--yellow)' />
+              <p> Issues</p>
+            </div>
+            <div className='experience-metric--value'>
+              <p>1,000</p>
+            </div>
+          </li>
+          <li className='experience-metric'>
+            <div className='experience-metric--description'>
               <SiCodewars
                 size={20}
-                color='#000' />
-              <span> Codewars: 1,000</span>
-            </li>
-          </ul>
-        </div>
+                color='var(--yellow)' />
+              <p> Codewars</p>
+            </div>
+            <div className='experience-metric--value'>
+              <p>1,000</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </Card>
   )
