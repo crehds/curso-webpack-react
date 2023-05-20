@@ -2,7 +2,7 @@ import './styles.css';
 
 export const Photo = ({
   src = 'https://avatars.githubusercontent.com/u/42285802?v=4',
-  name, position = 'center'
+  name, position = ''
 }) => {
   return (
     <div className={`Photo--container ${position} circle`}>
