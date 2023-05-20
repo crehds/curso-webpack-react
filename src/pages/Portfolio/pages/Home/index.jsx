@@ -6,7 +6,9 @@ import { Photo } from '../../components/Photo';
 const Home = (props) => {
   return (
     <Card>
-      <Photo src={props.avatar_url} />
+      <Photo
+        position='center'
+        src={props.avatar_url} />
       <UserData
         name={props.name}
         email={props.email}

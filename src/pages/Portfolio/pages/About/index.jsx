@@ -6,7 +6,7 @@ import { InfoParagraph } from './components/InfoParagraph';
 function About() {
   return (
     <Card>
-      <Photo />
+      <Photo position='center' />
       <InfoParagraph />
     </Card>
   );
