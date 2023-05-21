@@ -5,7 +5,7 @@
     text-align: justify;
     margin: 8px 0;
   }
-  & div {
+  & .technologies {
     margin-top: 15px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);

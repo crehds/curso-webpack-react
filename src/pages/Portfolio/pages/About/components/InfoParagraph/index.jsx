@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import './styles.css';
+import TECHNOLOGIES from '../../consts/technologies';
 
 export function InfoParagraph() {
   const { t }= useTranslation();
@@ -8,25 +9,14 @@ export function InfoParagraph() {
       <p>
         {t('portfolio.pages.about.info-paragraph')}
       </p>
-      <div>
-        <i className='icon-react'></i>
-        <i className='icon-javascript'></i>
-        <i className='icon-html5'></i>
-        <i className='icon-css3'></i>
-        <i className='icon-git'></i>
-        <i className='icon-sass'></i>
-        <i className='icon-mysql'></i>
-        <i className='icon-rails'></i>
-        <i className='icon-ruby'></i>
-        <i className='icon-postman'></i>
-        <i className='icon-webpack'></i>
-        <i className='icon-firebase'></i>
-        <i className='icon-mongodb'></i>
-        <i className='icon-styled-components'></i>
-        <i className='icon-node-dot-js'></i>
-        <i className='icon-redux'></i>
-        <i className='icon-terminal'></i>
-        <i className='icon-adobephotoshop'></i>
+      <div className='technologies'>
+        {
+          TECHNOLOGIES.map((technology) => (
+            <div key={technology.name}>
+              {technology.icon}
+            </div>
+          ))
+        }
       </div>
     </div>
   );
