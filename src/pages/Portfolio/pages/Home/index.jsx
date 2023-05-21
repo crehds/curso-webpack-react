@@ -13,6 +13,7 @@ const Home = (props) => {
         name={props.name}
         email={props.email}
         country={props.location}
+        phone='+51 970 791 041'
       />
       <SocialMedia />
     </Card>

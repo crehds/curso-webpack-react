@@ -11,6 +11,7 @@ export const UserData = (props) => {
       <ul>
         <li>{props.email ? props.email : 'carlos15erh@gmail.com'}</li>
         <li>{props.country}</li>
+        <li>{props.phone}</li>
       </ul>
     </div>
   );
