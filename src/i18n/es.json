@@ -8,9 +8,6 @@
     },
     "portfolio": {
       "pages": {
-        "about": {
-          "info-paragraph": "Cuento con 3 años y medio de experiencia como desarrollador web full-stack. Siendo React, Redux, Webpack, PostCSS y TailwindCSS las tecnologías favoritas a usar en el cliente. Añadido a ello o individualmente, trabajo con NodeJs o Ruby on Rails como principales herramientas de desarrollo en el servidor."
-        },
         "contact": {
           "header": {
             "title": "Trabajemos juntos",
@@ -43,6 +40,6 @@
         }
       }
     },
-    "main-role": "DESARROLLADOR SSr. WEB FULL-STACK"
+    "main-role": "DESARROLLADOR SSr. WEB FULL-STACK (+3 1/2 años)"
   }
 }
