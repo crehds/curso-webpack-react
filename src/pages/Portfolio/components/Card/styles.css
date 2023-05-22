@@ -10,6 +10,7 @@
   width: 100%;
   max-width: 1024px;
   &.default,
+  &.up,
   &.no-division {
     &::after {
       content: '';
@@ -25,6 +26,11 @@
     &::after {
       height: 130px;
       border-bottom: 1px solid var(--gray-2);
+    }
+  }
+  &.up {
+    &::after {
+      height: 100%;
     }
   }
 }

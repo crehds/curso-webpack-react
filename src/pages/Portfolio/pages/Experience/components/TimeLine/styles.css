@@ -1,0 +1,16 @@
+.timeline {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  & .timeline-experience {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--font-primary);
+    & p {
+      color: var(--font-secondary);
+    }
+  }
+}
