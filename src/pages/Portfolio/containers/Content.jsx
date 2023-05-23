@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Profile = React.lazy(() => import('../pages/Profile'));
-const About = React.lazy(() => import('../pages/About'));
+const Technologies = React.lazy(() => import('../pages/Technologies'));
 const Projects = React.lazy(() => import('../pages/Projects'));
 const Contact = React.lazy(() => import('../pages/Contact'));
 const Experience = React.lazy(() => import('../pages/Experience'));
@@ -10,7 +10,7 @@ import './styles.css';
 
 const pages = {
   profile: ({ user }) => <Profile {...user} />,
-  about: () => <About />,
+  technologies: () => <Technologies />,
   projects: () => <Projects />,
   contact: () => <Contact />,
   experience: () => <Experience />

@@ -44,10 +44,10 @@ export function NavBar({ appContent, setAppContent }) {
           {t('navbar.profile')}
         </a>
         <a
-          id='about'
-          className={`option ${appContent === 'about' ? 'active' : 'inactive'}`}
+          id='technologies'
+          className={`option ${appContent === 'technologies' ? 'active' : 'inactive'}`}
           onClick={handleOption}>
-          {t('navbar.about')}
+          {t('navbar.technologies')}
         </a>
         <a
           id='experience'
