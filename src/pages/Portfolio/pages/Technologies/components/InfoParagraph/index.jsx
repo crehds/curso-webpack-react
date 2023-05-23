@@ -7,8 +7,11 @@ export function InfoParagraph() {
       <div className='technologies'>
         {
           TECHNOLOGIES.map((technology) => (
-            <div key={technology.name}>
+            <div
+              key={technology.name}
+              className='technology'>
               {technology.icon}
+              <p>{technology.name}</p>
             </div>
           ))
         }
