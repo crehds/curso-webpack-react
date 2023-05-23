@@ -3,7 +3,7 @@ import { Card } from '../../components/Card';
 import { Photo } from '../../components/Photo';
 import { InfoParagraph } from './components/InfoParagraph';
 
-function About() {
+function Technologies() {
   return (
     <Card>
       <Photo position='center' />
@@ -12,4 +12,4 @@ function About() {
   );
 }
 
-export default About;
+export default Technologies;
