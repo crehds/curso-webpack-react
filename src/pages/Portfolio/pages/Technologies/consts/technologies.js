@@ -2,7 +2,7 @@ import {
   SiAmazonaws,
   SiBootstrap,
   SiCreatereactapp,
-  SiCss3, SiDocker, SiExpress, SiFigma, SiFirebase, SiGit, SiGithub, SiGooglecloud, SiHtml5, SiInsomnia, SiJavascript, SiJest, SiMongodb, SiMysql, SiNodedotjs, SiPostcss, SiPostgresql, SiPostman, SiPrisma, SiPuma, SiReact, SiReactrouter, SiRedux, SiRubyonrails, SiSass, SiSequelize, SiStyledcomponents, SiTailwindcss, SiTypescript, SiVite, SiWebpack
+  SiCss3, SiDocker, SiExpress, SiFigma, SiFirebase, SiGit, SiGithub, SiGooglecloud, SiHtml5, SiInsomnia, SiJavascript, SiJest, SiMongodb, SiMysql, SiNodedotjs, SiPostcss, SiPostgresql, SiPostman, SiPrisma, SiReact, SiReactrouter, SiRedux, SiRubyonrails, SiSass, SiSequelize, SiStyledcomponents, SiTailwindcss, SiTypescript, SiVite, SiWebpack
 } from 'react-icons/si';
 import { VscTerminalUbuntu } from 'react-icons/vsc';
 import { DiRuby } from 'react-icons/di';
@@ -44,11 +44,11 @@ const TECHNOLOGIES = [
     icon: createIcon('#C21325', 30, SiJest), },
   { name: 'ruby',
     icon: createIcon('#CC342D', 30, DiRuby), },
-  { name: 'rails',
+  { name: 'ruby on rails',
     icon: createIcon('#CC0000', 30, SiRubyonrails), },
   { name: 'terminal',
     icon: createIcon('#4EAA25', 30, VscTerminalUbuntu), },
-  { name: 'styled-components',
+  { name: 'styled components',
     icon: createIcon('#DB7093', 30, SiStyledcomponents), },
   { name: 'postman',
     icon: createIcon('#FF6C37', 30, SiPostman), },
@@ -62,7 +62,7 @@ const TECHNOLOGIES = [
     icon: createIcon('#F24E1E', 30, SiFigma), },
   { name: 'google services',
     icon: createIcon('#4285F4', 30, SiGooglecloud), },
-  { name: 'aws',
+  { name: 'amazon web services',
     icon: createIcon('#6181a9', 30, SiAmazonaws)
     ,  },
   { name: 'docker',
@@ -71,14 +71,14 @@ const TECHNOLOGIES = [
     icon: createIcon('#DD3A0A', 30, SiPostcss), },
   { name: 'tailwind',
     icon: createIcon('#06B6D4', 30, SiTailwindcss), },
-  { name: 'create-react-app',
+  { name: 'create react app',
     icon: createIcon('#61DAFB', 30, SiCreatereactapp), },
   { name: 'vite',
     icon: createIcon('#646CFF', 30, SiVite), },
-  { name: 'react-router',
+  { name: 'react router',
     icon: createIcon('#CA4245', 30, SiReactrouter), },
-  { name: 'puma',
-    icon: createIcon('#E74C3C', 30, SiPuma), },
+  // { name: 'puma',
+  //   icon: createIcon('#E74C3C', 30, SiPuma), },
   { name: 'postgresql',
     icon: createIcon('#336791', 30, SiPostgresql), },
   { name: 'github',
