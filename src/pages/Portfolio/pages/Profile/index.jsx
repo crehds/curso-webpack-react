@@ -3,7 +3,7 @@ import { SocialMedia } from './components/SocialMedia';
 import { Card } from '../../components/Card';
 import { Photo } from '../../components/Photo';
 
-const Home = (props) => {
+const Profile = (props) => {
   return (
     <Card>
       <Photo
@@ -20,4 +20,4 @@ const Home = (props) => {
   );
 };
 
-export default Home;
+export default Profile;
