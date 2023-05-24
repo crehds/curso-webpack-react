@@ -31,18 +31,21 @@ export const Form = ({ handleEmail, setIsOpen }) => {
         name='name'
         type='text'
         placeholder={translatePlaceholder('name')}
+        required={true}
       />
       <Input
         label={translateLabel('e-mail')}
         name='e-mail'
         type='email'
         placeholder={translatePlaceholder('e-mail')}
+        required={true}
       />
       <Input
         label={translateLabel('phone')}
         name='phone'
         type='tel'
         placeholder={translatePlaceholder('phone')}
+        required={true}
       />
       <TextArea
         label={translateLabel('message')}
