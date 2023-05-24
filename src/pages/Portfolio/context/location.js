@@ -4,7 +4,7 @@ import {
 
 const LocationContext = createContext();
 
-const INITIAL_LOCATION = localStorage.getItem('location') || 'home';
+const INITIAL_LOCATION = localStorage.getItem('location') || 'profile';
 
 export function LocationProvider({ children }) {
   const [location, setLocation] = useState(INITIAL_LOCATION);
