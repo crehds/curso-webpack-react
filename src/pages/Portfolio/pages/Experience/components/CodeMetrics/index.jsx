@@ -23,7 +23,7 @@ function CodeMetrics() {
                 <p> Pull Requests</p>
               </div>
               <div className='code-metric--value'>
-                <p>1,000</p>
+                <p>250</p>
               </div>
             </li>
             <li className='code-metric'>
@@ -34,7 +34,7 @@ function CodeMetrics() {
                 <p> Commits</p>
               </div>
               <div className='code-metric--value'>
-                <p>1,000</p>
+                <p>5,436</p>
               </div>
             </li>
             <li className='code-metric'>
@@ -45,7 +45,7 @@ function CodeMetrics() {
                 <p> Code Reviews </p>
               </div>
               <div className='code-metric--value'>
-                <p>1,000</p>
+                <p>53</p>
               </div>
             </li>
             <li className='code-metric'>
@@ -56,7 +56,7 @@ function CodeMetrics() {
                 <p> Issues</p>
               </div>
               <div className='code-metric--value'>
-                <p>1,000</p>
+                <p>25</p>
               </div>
             </li>
             <li className='code-metric'>
@@ -67,7 +67,7 @@ function CodeMetrics() {
                 <p> Codewars</p>
               </div>
               <div className='code-metric--value'>
-                <p>1,000</p>
+                <p>1,197</p>
               </div>
             </li>
           </ul>
