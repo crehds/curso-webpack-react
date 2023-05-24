@@ -1,3 +1,5 @@
+import { SiLinkedin } from 'react-icons/si'
+
 import './styles.css';
 
 export const SocialMedia = () => {
@@ -18,11 +20,12 @@ export const SocialMedia = () => {
           alt='logo de github' />
       </a>
       <a
-        href='https://www.facebook.com/checa.rh'
+        href='https://www.linkedin.com/in/carlos-rodriguez-huerta-362ab716a'
         target='_blank'>
-        <i
-          className='icon-facebook facebook'
-          alt='logo de instagram' />
+        <SiLinkedin
+          className='icon-linkedin'
+          size={28}
+          color='#505050b3' />
       </a>
     </div>
   );
