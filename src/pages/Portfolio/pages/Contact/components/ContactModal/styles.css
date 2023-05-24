@@ -6,6 +6,8 @@
   flex-direction: column;
   align-items: center;
   background-color: rgba(32, 35, 41);
+  width: 100%;
+  max-width: 390px;
   &.wrappedModal--success {
     box-shadow: 0 0 2px 2px rgba(100, 180, 50, 0.8);
   }
@@ -21,9 +23,11 @@
       color: rgba(220, 30, 20, 0.85);
     }
   }
-  & .titleModal {
-    font-size: 40px;
+  & .wrappedModal--message {
     margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
   & button {
     background-color: transparent;

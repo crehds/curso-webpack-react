@@ -59,7 +59,9 @@ function Contact() {
               state='success'
               handleIsOpen={handleIsOpen}
               iconModal='icon-check-circle'
-              titleModal={t('portfolio.pages.contact.modal.success.title')} />
+              titleModal={t('portfolio.pages.contact.modal.success.title')}
+              messageModal={t('portfolio.pages.contact.modal.success.message')}
+            />
           ) }
           onError={() => (
             <ContactModal
@@ -67,6 +69,7 @@ function Contact() {
               handleIsOpen={handleIsOpen}
               iconModal='icon-x-altx-alt'
               titleModal={t('portfolio.pages.contact.modal.error.title')}
+              messageModal={t('portfolio.pages.contact.modal.error.message')}
             />
           ) }
         >
