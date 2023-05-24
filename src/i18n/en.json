@@ -15,7 +15,14 @@
             "gmail": "or write a e-mail"
           },
           "modal": {
-            "title": "Something went wrong",
+            "success": {
+              "title": "Message sent",
+              "message": "I'll get back to you as soon as possible"
+            },
+            "error": {
+              "title": "Error",
+              "message": "Something went wrong, please try again later"
+            },
             "button": "Ok"
           },
           "form": {

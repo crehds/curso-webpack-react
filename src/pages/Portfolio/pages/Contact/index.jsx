@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Form } from './components/Form';
 import { Header } from './components/Header';
 import { ContactModal } from './components/ContactModal';
@@ -10,6 +11,7 @@ import './styles.css';
 function Contact() {
   const [isOpen, setIsOpen] = useState(false);
   const [modalState, setModalState] = useState("loading");
+  const { t } = useTranslation();
 
   const handleIsOpen = () => {
     setIsOpen(!isOpen);
@@ -57,13 +59,14 @@ function Contact() {
               state='success'
               handleIsOpen={handleIsOpen}
               iconModal='icon-check-circle'
-              titleModal='Mensaje enviado' />
+              titleModal={t('portfolio.pages.contact.modal.success.title')} />
           ) }
           onError={() => (
             <ContactModal
               state='error'
               handleIsOpen={handleIsOpen}
               iconModal='icon-x-altx-alt'
+              titleModal={t('portfolio.pages.contact.modal.error.title')}
             />
           ) }
         >

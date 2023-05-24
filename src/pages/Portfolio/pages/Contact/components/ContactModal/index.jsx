@@ -6,7 +6,7 @@ import './styles.css';
 export function ContactModal(props) {
   const { t } = useTranslation();
   const {
-    state, handleIsOpen, iconModal
+    state, handleIsOpen, iconModal, titleModal
   } = props;
 
   function handleButton() {
@@ -18,7 +18,7 @@ export function ContactModal(props) {
   return (
     <div className={`wrappedModal wrappedModal--${state}`}>
       <i className={`${iconModal} ${state}`}></i>
-      <div className={`titleModal`}>{t('portfolio.pages.contact.modal.title')}</div>
+      <div className={`titleModal`}>{titleModal}</div>
       <button
         type='button'
         onClick={handleButton}>
