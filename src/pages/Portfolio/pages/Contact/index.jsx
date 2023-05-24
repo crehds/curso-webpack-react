@@ -22,7 +22,7 @@ function Contact() {
     try {
       const formData = new FormData(form)
       const data = Object.fromEntries(formData.entries());
-      if (data.name === '' || data['e-mail'] === '' || data.message === '' || data.phone === '') {
+      if (data.name === '' || data['e-mail'] === '' || data.phone === '') {
         throw new Error('Todos los campos son obligatorios');
       }
 
