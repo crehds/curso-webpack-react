@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Form } from './components/Form';
 import { Header } from './components/Header';
 import { ContactModal } from './components/ContactModal';
@@ -10,6 +11,7 @@ import './styles.css';
 function Contact() {
   const [isOpen, setIsOpen] = useState(false);
   const [modalState, setModalState] = useState("loading");
+  const { t } = useTranslation();
 
   const handleIsOpen = () => {
     setIsOpen(!isOpen);
@@ -20,7 +22,7 @@ function Contact() {
     try {
       const formData = new FormData(form)
       const data = Object.fromEntries(formData.entries());
-      if (data.name === '' || data['e-mail'] === '' || data.message === '' || data.phone === '') {
+      if (data.name === '' || data['e-mail'] === '' || data.phone === '') {
         throw new Error('Todos los campos son obligatorios');
       }
 
@@ -57,13 +59,17 @@ function Contact() {
               state='success'
               handleIsOpen={handleIsOpen}
               iconModal='icon-check-circle'
-              titleModal='Mensaje enviado' />
+              titleModal={t('portfolio.pages.contact.modal.success.title')}
+              messageModal={t('portfolio.pages.contact.modal.success.message')}
+            />
           ) }
           onError={() => (
             <ContactModal
               state='error'
               handleIsOpen={handleIsOpen}
               iconModal='icon-x-altx-alt'
+              titleModal={t('portfolio.pages.contact.modal.error.title')}
+              messageModal={t('portfolio.pages.contact.modal.error.message')}
             />
           ) }
         >

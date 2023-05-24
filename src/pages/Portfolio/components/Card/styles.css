@@ -9,15 +9,28 @@
   z-index: 5;
   width: 100%;
   max-width: 1024px;
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 130px;
-    top: 0;
-    background: rgba(68, 70, 90, 0.85);
-    border-bottom: 1px solid var(--gray-2);
-    z-index: -1;
+  &.default,
+  &.up,
+  &.no-division {
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      background: rgba(68, 70, 90, 0.85);
+      z-index: -1;
+    }
+  }
+  &.default {
+    &::after {
+      height: 130px;
+      border-bottom: 1px solid var(--gray-2);
+    }
+  }
+  &.up {
+    &::after {
+      height: 100%;
+    }
   }
 }

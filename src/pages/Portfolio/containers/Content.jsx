@@ -1,17 +1,19 @@
 import React from 'react';
 
-const Home = React.lazy(() => import('../pages/Home'));
-const About = React.lazy(() => import('../pages/About'));
+const Profile = React.lazy(() => import('../pages/Profile'));
+const Technologies = React.lazy(() => import('../pages/Technologies'));
 const Projects = React.lazy(() => import('../pages/Projects'));
 const Contact = React.lazy(() => import('../pages/Contact'));
+const Experience = React.lazy(() => import('../pages/Experience'));
 
 import './styles.css';
 
 const pages = {
-  home: ({ user }) => <Home {...user} />,
-  about: () => <About />,
+  profile: ({ user }) => <Profile {...user} />,
+  technologies: () => <Technologies />,
   projects: () => <Projects />,
-  contact: () => <Contact />
+  contact: () => <Contact />,
+  experience: () => <Experience />
 }
 
 export function handleContent({ page = '', user = {} }) {

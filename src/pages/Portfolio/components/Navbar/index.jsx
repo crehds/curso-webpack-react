@@ -38,16 +38,22 @@ export function NavBar({ appContent, setAppContent }) {
         onClick={handleActiveNavbar} />
       <ul className='options--wrapped'>
         <a
-          id='home'
-          className={`option ${appContent === 'home' ? 'active' : 'inactive'}`}
+          id='profile'
+          className={`option ${appContent === 'profile' ? 'active' : 'inactive'}`}
           onClick={handleOption}>
-          {t('navbar.home')}
+          {t('navbar.profile')}
         </a>
         <a
-          id='about'
-          className={`option ${appContent === 'about' ? 'active' : 'inactive'}`}
+          id='technologies'
+          className={`option ${appContent === 'technologies' ? 'active' : 'inactive'}`}
           onClick={handleOption}>
-          {t('navbar.about')}
+          {t('navbar.technologies')}
+        </a>
+        <a
+          id='experience'
+          className={`option ${appContent === 'experience' ? 'active' : 'inactive'}`}
+          onClick={handleOption}>
+          {'Experience'}
         </a>
         <a
           id='projects'

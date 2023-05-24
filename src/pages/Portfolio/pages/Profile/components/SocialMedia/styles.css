@@ -16,9 +16,9 @@
       &.github:hover {
         color: rgb(22, 27, 34);
       }
-      &.facebook:hover {
-        color: #1877f2;
-      }
+    }
+    & .icon-linkedin:hover {
+      fill: #1877f2;
     }
   }
 }
