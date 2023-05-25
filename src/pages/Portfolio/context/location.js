@@ -1,10 +1,13 @@
 import {
   createContext, useState, useContext
 } from "react";
+import PAGES from "../containers/pages";
 
 const LocationContext = createContext();
 
-const INITIAL_LOCATION = localStorage.getItem('location') || 'profile';
+const DEFAULT_LOCATION = Object.keys(PAGES)[0];
+
+const INITIAL_LOCATION = localStorage.getItem('location') || DEFAULT_LOCATION;
 
 export function LocationProvider({ children }) {
   const [location, setLocation] = useState(INITIAL_LOCATION);
